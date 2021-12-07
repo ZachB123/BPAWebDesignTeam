@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --off-black: rgb(34, 34, 34);
+    --logo-green: rgb(0, 255, 0);
+    --hover-white: rgb(240, 240, 240);
+    --popup-grey: rgb(88, 88, 88);
+    --nav-font: 0.8em;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div {
+    margin: 0 10px;
+}
+
+.nav-left h2 {
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--logo-green);
+}
+
+.nav-left img {
+    width: 80px;
+    height: 80px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 20px;
+}
+
+.nav-item a {
+    color: rgb(226, 226, 226);
+    font-size: var(--nav-font);
+    display: block;
+}
+
+.nav-item:hover {
+    background-color: var(--hover-white);
+    box-shadow: 6px 6px #000;
+}
+
+/* here for js */
+.nav-item-hover {
+    background-color: var(--hover-white);
+    box-shadow: 6px 6px #000;
+}
+
+.nav-item:hover>a {
+    color: #000;
+}
+
+.nav-item i {
+    transform: translateY(6px);
+}
+
+/*display width and left  need to be changed in js */
+nav .dropdown {
+    display: none;
+    background-color: var(--hover-white);
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    box-shadow: 6px 6px var(--off-black);
+}
+
+nav .dropdown a {
+    display: block;
+    font-size: var(--nav-font);
+    padding: 12px 0;
+}
+
+nav .dropdown a:hover {
+    color: rgb(109, 109, 109);
+}
+
+.hamburger i {
+    font-size: 60px;
+    color: #fff;
+}
+
+.hamburger i:hover {
+    cursor: pointer;
+}
+
+/* display set to block when hamburger menu is clicked */
+.mobile-nav {
+    display: none;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--popup-grey);
+}
+
+.exit-mobile-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin: 16px;
+    cursor: pointer
+}
+
+.exit-mobile-nav i {
+    font-size: 64px;
+    color: #fff;
+    transition: all 0.0;
+}
+
+.exit-mobile-nav i:hover {
+    transition: transform 0.25s linear 0s;
+    transform: rotate(180deg);
+    color: rgb(226, 226, 226);
+}
+
+.mobile-nav ul {
+    margin: 20px 0;
+}
+
+.mobile-nav li {
+    margin: 14px 0;
+}
+
+.mobile-nav a {
+    color: #fff;
+    font-size: 1.6em;
+}
+
+.mobile-nav a:hover {
+    color: rgb(214, 214, 214);
+}
+
+.nav-right, .nav-center {
+    display: none;
+}
+
+@media only screen and (min-width: 888px) {
+    .nav-right {
+        display: block;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    :root {
+        --nav-font: 0.98em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        --nav-font: 1.35em;
+    }
+}
+
+body {
+    position: relative;
+    background-image: url("../images/landscape.jpg");
+    aspect-ratio: 3 / 2;
+    background-size: cover;
+}
