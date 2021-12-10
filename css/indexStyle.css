@@ -1,0 +1,8 @@
+
+
+body {
+    position: relative;
+    background-image: url("../images/landscape.jpg");
+    aspect-ratio: 3 / 2;
+    background-size: cover;
+}

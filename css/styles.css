@@ -3,6 +3,7 @@
 
 :root {
     --off-black: rgb(34, 34, 34);
+    --off-blackh: rgba(34, 34, 34, 0.0);
     --logo-green: rgb(0, 255, 0);
     --hover-white: rgb(240, 240, 240);
     --popup-grey: rgb(88, 88, 88);
@@ -20,18 +21,27 @@ body, html {
     height: 100%;
 }
 
+body {
+    position: relative;
+}
+
 a {
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
 nav {
-    position: relative;
+    position: absolute;
+    display: block;
+    width: 100%;
     z-index: 1;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--off-blackh);
+    box-shadow: 0px 4px 6px var(--off-blackh);
 }
 
 nav > div {
@@ -87,23 +97,30 @@ ul {
     transform: translateY(6px);
 }
 
+nav ul li:first-child > a {
+    cursor: default;
+}
+
 /*display width and left  need to be changed in js */
-nav .dropdown {
+nav #dropdown {
     display: none;
     background-color: var(--hover-white);
     position: absolute;
     top: 80px;
     text-align: center;
     box-shadow: 6px 6px var(--off-black);
+    line-height: 50px;
+    height: auto;
+    cursor: pointer;
 }
 
-nav .dropdown a {
+nav #dropdown a {
     display: block;
     font-size: var(--nav-font);
-    padding: 12px 0;
+    color: #000;
 }
 
-nav .dropdown a:hover {
+nav #dropdown a:hover {
     color: rgb(109, 109, 109);
 }
 
@@ -193,8 +210,5 @@ nav .dropdown a:hover {
 }
 
 body {
-    position: relative;
-    background-image: url("../images/landscape.jpg");
-    aspect-ratio: 3 / 2;
-    background-size: cover;
+    background-color: rgb(0, 0, 0);
 }
