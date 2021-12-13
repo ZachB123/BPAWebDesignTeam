@@ -1,7 +1,7 @@
 
 :root {
     --heading-color: rgb(255, 255, 255);
-    --secondary-heading-color: rgb(233, 233, 233);
+    --secondary-heading-color: rgb(230, 230, 230);
     --slogan-color: rgb(207, 207, 207);
     --heading-font-size: 3.4em;
     --secondary-heading-font-size: 1.3em;
@@ -33,12 +33,12 @@ h2 {
 }
 
 .spacer {
-    height: 60px;
+    height: 80px;
 }
 
 .upper-hero {
    width: 90%;
-   margin: 0 auto 30px auto; 
+   margin: 0 auto 20px auto; 
 }
 
 .upper-hero p {
@@ -52,26 +52,48 @@ h2 {
 }
 
 .hero button {
-    margin-top: 60px;
+    margin-top: 50px;
     font-size: 2em;
-    padding: 0.3em 1em;
+    padding: 0.5em 1em;
     background-image: linear-gradient(135deg, var(--green), #26973e);
     color: #fff;
     cursor: pointer;
-    border-radius: 100vh;
+    border-radius: 8px;
     border: 2px solid #000;
 }
 
 .hero button:hover {
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px 3px #000;
     background-image: none;
     background-color: rgb(231, 231, 231);
     color: black;
 }
 
+@media only screen and (max-width: 375px) {
+    :root {
+        --heading-font-size: 2.5em;
+        --secondary-heading-font-size: 0.9em;
+        --slogan-font-size: 0.6em;
+    }
+    .hero button {
+        font-size: 1.4em;
+    }
+    .spacer {
+        height: 30px;
+    }
+}
+
 @media only screen and (min-width: 992px) {
+    :root {
+        --heading-font-size: 3.7em;
+        --secondary-heading-font-size: 1.6em;
+        --slogan-font-size: 1em;
+    }
     header {
         background-image: url("../images/landscape-tablet.png");
+    }
+    .spacer {
+        height: 80px;
     }
     .hero {
         width: 60%;
@@ -80,8 +102,16 @@ h2 {
 }
 
 @media only screen and (min-width: 1200px) {
+    :root {
+        --heading-font-size: 3.8em;
+        --secondary-heading-font-size: 1.7em;
+        --slogan-font-size: 1.1em;
+    }
     header {
         background-image: url("../images/landscape-desktop.png");
+    }
+    .spacer {
+        height: 60px;
     }
     .hero {
         width: 40%;
