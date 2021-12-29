@@ -49,3 +49,9 @@ function showDropdown(event) {
 function hideDropdown(event) {
     carbonSourcesDropdown.style.display = "none";
 }
+
+function autoScrolling() {
+    window.scrollTo(0,document.body.scrollHeight);
+ }
+ 
+ setInterval(autoScrolling, 500); 
