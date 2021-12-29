@@ -50,8 +50,27 @@ function hideDropdown(event) {
     carbonSourcesDropdown.style.display = "none";
 }
 
+////////////////////////////////////////
+//Contact Us Form
+////////////////////////////////////////
+
+let sendButton = document.querySelector("footer .email button");
+let nameInput = document.querySelector("#name");
+let emailInput = document.querySelector("#email");
+let messageArea = document.querySelector("footer textarea");
+
+sendButton.addEventListener("click", sendEmail);
+
+function sendEmail() {
+    nameInput.value = "";
+    emailInput.value = "";
+    messageArea.value = "";
+}
+
+
+
 function autoScrolling() {
     window.scrollTo(0,document.body.scrollHeight);
  }
  
-//  setInterval(autoScrolling, 500); 
+//  setInterval(autoScrolling, 500);

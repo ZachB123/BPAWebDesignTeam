@@ -229,11 +229,16 @@ footer {
 
 .email {
   height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color: lawngreen; */
 }
 
 .email .container {
   padding: 10px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 footer h3 {
@@ -254,6 +259,7 @@ footer h3 {
 }
 
 .email button {
+  display: block;
   margin-top: 6px;
   font-size: 24px;
   padding: 0.2em 0.6em;
@@ -262,6 +268,13 @@ footer h3 {
   cursor: pointer;
   border-radius: 2px;
   border: 2px solid #000;
+}
+
+.email button:hover {
+  box-shadow: 0 0 10px 3px #000;
+  background-image: none;
+  background-color: rgb(231, 231, 231);
+  color: black;
 }
 
 .links {
@@ -294,10 +307,6 @@ footer h3 {
   color: rgb(223, 223, 223);
 }
 
-.links ul {
-  background-color: green;
-}
-
 .social-media {
   height: 100px;
   /* background-color:plum; */
@@ -308,8 +317,60 @@ footer h3 {
   height: 100px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .social-media img {
-  height: 80px;
+  height: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .email .container {
+    padding: 40px;
+    width: 70%;
+  }
+  .email textarea {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  footer {
+    height: 500px;
+    position: relative;
+  }
+  .email {
+    height: 400px;
+    width: 50%;
+    float: left;
+  }
+  .email textarea {
+    width: 100%;
+    height: 120px;
+  }
+  .links {
+    height: 400px;
+    width: 50%;
+    float: right;
+  }
+  .links a {
+    font-size: 28px;
+  }
+  .social-media {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .social-media .container {
+    justify-content: center;
+  }
+  .social-media img {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .links a {
+    font-size: 30px;
+  }
 }
