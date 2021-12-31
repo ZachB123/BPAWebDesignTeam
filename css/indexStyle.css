@@ -168,3 +168,22 @@ h2 {
 .learn-more-cta button:hover a{
   color: rgb(95, 95, 95);
 }
+
+@media only screen and (min-width: 512px) {
+  .welcome, .pages {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main-content h3 {
+    margin: 24px;
+  }
+  .main-content hr {
+    margin: 30px 20px 30px 20px;
+  }
+  .learn-more-cta {
+    margin: 24px 0;
+  }
+  .main-content p {
+    line-height: 30px;
+  }
+}
