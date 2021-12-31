@@ -18,6 +18,10 @@
   font-family: "Work Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   width: 100%;
   height: 100%;
@@ -225,6 +229,7 @@ nav #dropdown a:hover {
 footer {
   height: 600px;
   background-color: rgb(44, 44, 44);
+  /* 44 */
 }
 
 .email {
@@ -256,6 +261,10 @@ footer h3 {
 .email textarea {
   width: 100%;
   height: 100px;
+}
+
+.email textarea, .email input {
+  border-radius: 8px;
 }
 
 .email button {
