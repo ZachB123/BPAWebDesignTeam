@@ -9,6 +9,7 @@
   --hover-white: rgba(240, 240, 240, 1);
   --popup-grey: rgb(88, 88, 88);
   --nav-font: 0.87em;
+  --green: #15e215;
 }
 
 /* Lato Nunito Sans Work Sans*/
@@ -61,7 +62,7 @@ nav > div {
 
 .nav-left {
   margin: 0;
-  transform: translate(2px, 2px);
+  transform: translate(4px, 4px);
 }
 
 .nav-left h2 {
@@ -71,8 +72,8 @@ nav > div {
 }
 
 .nav-left img {
-  width: 113.6px;
-  height: 80px;
+  width: 102.24px;
+  height: 72px;
 }
 
 ul {
@@ -272,11 +273,12 @@ footer h3 {
   margin-top: 6px;
   font-size: 24px;
   padding: 0.2em 0.6em;
-  background-image: linear-gradient(135deg, var(--green), #2cb84b);
+  background-image: linear-gradient(135deg, #4d774e, #164a41);
   color: #fff;
   cursor: pointer;
   border-radius: 2px;
   border: 2px solid #000;
+  border-radius: 6px;
 }
 
 .email button:hover {
@@ -331,6 +333,10 @@ footer h3 {
 
 .social-media img {
   height: 60px;
+}
+
+.social-media img:hover {
+  height: 62.6px;
 }
 
 @media only screen and (min-width: 768px) {
