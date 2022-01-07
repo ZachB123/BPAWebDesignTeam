@@ -13,15 +13,16 @@ hamburger.addEventListener("click", openMobileNav);
 mobileNavClose.addEventListener("click", closeMobileNav);
 
 let mobileNav = document.querySelector("nav .mobile-nav");
+let navHeight = mobileNav.getBoundingClientRect().height;
 
 //opens the navigation screen on mobile when hamburger icon is clicked
 function openMobileNav(event) {
-    mobileNav.style.display = "block";
+    mobileNav.style.top = "0px";
 }
 
 //closes mobile navigations screen
 function closeMobileNav(event) {
-    mobileNav.style.display = "none";
+    mobileNav.style.top = -navHeight + "px";
 }
 
 ////////////////////////////////////////

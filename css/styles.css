@@ -43,8 +43,26 @@ textarea {
   resize: none;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1c9e1c;
+  border-radius: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(34, 34, 34);
+}
+
 nav {
-  position: absolute;
+  position: fixed;
+  top: 0px;
   display: block;
   width: 100%;
   z-index: 1;
@@ -54,6 +72,7 @@ nav {
   align-items: center;
   background-color: var(--off-blackh);
   box-shadow: 0px 4px 6px var(--off-blackh);
+  opacity: 1;
 }
 
 nav > div {
@@ -157,14 +176,15 @@ nav #dropdown a:hover {
 
 /* display set to block when hamburger menu is clicked */
 .mobile-nav {
-  display: none;
+  /* display: none; */
   margin: 0;
   position: fixed;
   left: 0;
-  top: 0;
+  top: -500px;
   width: 100%;
   text-align: center;
   background-color: var(--popup-grey);
+  transition: top 0.42s;
 }
 
 .exit-mobile-nav {
