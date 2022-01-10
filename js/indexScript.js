@@ -27,14 +27,17 @@ document.addEventListener('scroll', adjustNavbar);
 function adjustNavbar() {
     let scrollHeight = document.documentElement.scrollTop;
     if(scrollHeight >= pageHeight) {
+        navbar.style.position = "fixed";
         let diff = scrollHeight - pageHeight;
         let opacity = (1/500) * diff;
-        navbar.style.top = `${scrollHeight}px`;
+        navbar.style.top = "0px";
+        // navbar.style.top = `${scrollHeight}px`;
         navbar.style.backgroundColor = "rgba(34,34,34,1)";
         setOpacityNav(opacity);
     }
     else {
-        navbar.style.top = "0px";
+        navbar.style.display = "absolute";
+        navbar.style.top = `${scrollHeight * -1}px`;
         navbar.style.backgroundColor = "rgba(34,34,34,0)";
         setOpacityNav(1);
     }
