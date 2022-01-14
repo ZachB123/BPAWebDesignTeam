@@ -51,7 +51,40 @@ h2 {
   margin: auto;
 }
 
-.hero button {
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+    background-color: var(--medium-green);
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #000;
+    background-color: var(--light-green);
+    color: #000;
+    transition: background-color 1s, color 1s, box-shadow 0.5s;
+}
+
+.hero button.delete {
+    display: none;
     margin-top: 30px;
     font-size: 2em;
     padding: 0.5em 1em;
@@ -62,7 +95,7 @@ h2 {
     border: 2px solid #000;
 }
 
-.hero button:hover {
+.hero button.delete:hover {
     box-shadow: 0 0 10px 3px #000;
     background-image: none;
     background-color: rgb(231, 231, 231);
@@ -220,12 +253,12 @@ h2 {
     padding: none;
   }
   .content {
-    background-color: #cef1c2;
+    background-color: var(--light-green);
     width: 70%;
     padding: 6px;
     margin: 50px auto;
     position: relative;
-    box-shadow: 50px -25px #4d774e, -50px 25px #164a41;
+    box-shadow: 50px -25px var(--medium-green), -50px 25px var(--dark-green);
   }
   .content p {
     width: 90%;

@@ -31,7 +31,7 @@ h1 {
 }
 
 header img {
-    width: var(--hero-width);
+    width: calc(var(--hero-width) + 10%);
     border-radius: 6px;
 }
 
@@ -42,8 +42,8 @@ header img {
 }
 
 p, .list-item {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 32px;
 }
 
 header hr {
@@ -51,6 +51,56 @@ header hr {
     height: 2px;
     background-color: #000;
     margin: 0 auto;
+}
+
+.main-content-big {
+    display: none;
+}
+
+.column {
+    width: 50%;
+    padding: 16px;
+    margin: 0 40px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+}
+
+.text-block {
+    margin: 40px 0;
+}
+
+.text-block h2 {
+    text-align: center;
+}
+
+.heading-block {
+    margin-bottom: 20px;
+}
+
+.text-block p {
+    text-align: left;
+    /* shadow and background stuff */
+    /* background-color: #dceed6;
+    padding: 10px;
+    box-shadow: 12px -6px #4d774e, -12px 6px #164a41; */
+}
+
+.image-block {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.image-block img {
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 6px 6px rgb(34, 34, 34);
+}
+
+.main-content-big ul{
+    padding-left: 20px;
 }
 
 @media only screen and (min-width: 512px) {
@@ -61,8 +111,8 @@ header hr {
         font-size: 2.7em;
     }
     p, .list-item {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 24px;
+        line-height: 32px;
     }
 }
 
@@ -74,12 +124,18 @@ header hr {
         font-size: 3em;
     }
     p, .list-item {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 26px;
+        line-height: 34px;
     }   
     header hr {
         width: 50%;
     } 
+    .main-content {
+        display: none;
+    }
+    .main-content-big {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -91,8 +147,11 @@ header hr {
     }
     p, .list-item {
         font-size: 26px;
-        line-height: 32px;
+        line-height: 34px;
     }   
+    .column {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -104,10 +163,16 @@ header hr {
     }
     p, .list-item {
         font-size: 28px;
-        line-height: 36px;
+        line-height: 40px;
     }    
     header hr {
         width: 38%;
+    }
+    .column {
+        width: 34%;
+    }
+    .main-content-big ul{
+        padding-left: 40px;
     }
 }
 
@@ -147,20 +212,4 @@ h2 {
 
 .list-item {
     margin: 4px 0;
-}
-
-@media only screen and (min-width: 512px) {
-
-}
-
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 992px) {
-
-}
-
-@media only screen and (min-width: 1200px) {
-
 }

@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Nunito+Sans:wght@300;400;700&family=Work+Sans:wght@300;400;700&display=swap");
 
+
+
 :root {
   --off-black: rgba(34, 34, 34, 1);
   /* background on nav */
@@ -10,6 +12,9 @@
   --popup-grey: rgb(88, 88, 88);
   --nav-font: 0.87em;
   --green: #15e215;
+  --light-green: #cef1c2;
+  --medium-green: #4d774e;
+  --dark-green: #164a41;
 }
 
 /* Lato Nunito Sans Work Sans*/
@@ -93,6 +98,8 @@ nav > div {
 .nav-left img {
   width: 102.24px;
   height: 72px;
+  /* background-color: rgba(255,255,255,0.20);
+  box-shadow: 0 0 20px 10px rgba(255,255,255,0.24); */
 }
 
 .nav-left img:hover {

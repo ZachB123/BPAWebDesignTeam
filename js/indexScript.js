@@ -20,6 +20,7 @@ function scrollToContent() {
 let header = document.querySelector("header");
 let pageHeight = header.getBoundingClientRect().height;
 let navbar = document.querySelector("nav");
+let navImage = document.querySelector(".nav-left img");
 navbar.style.position = "absolute";
 
 document.addEventListener('scroll', adjustNavbar);
@@ -34,18 +35,24 @@ function adjustNavbar() {
         // navbar.style.top = `${scrollHeight}px`;
         navbar.style.backgroundColor = "rgba(34,34,34,1)";
         setOpacityNav(opacity);
+        navImage.style.backgroundColor = "transparent";
+        navImage.style.boxShadow = "none"
     }
     else {
         navbar.style.display = "absolute";
         navbar.style.top = `${scrollHeight * -1}px`;
         navbar.style.backgroundColor = "rgba(34,34,34,0)";
         setOpacityNav(1);
+        navImage.style.backgroundColor = "rgba(255,255,255,0.20)";
+        navImage.style.boxShadow = "0 0 20px 10px rgba(255,255,255,0.24)"
     }
 }
 
 function setOpacityNav(opacity) {
     navbar.style.opacity = opacity;
 }
+
+adjustNavbar();
 
 
 
