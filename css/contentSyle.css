@@ -41,9 +41,39 @@ header img {
     margin: 0 auto 10px auto;
 }
 
-p, .list-item {
+p, .list-item, .tips li {
     font-size: 24px;
     line-height: 32px;
+}
+
+.tips > ul > li {
+    font-weight: bold;
+} 
+
+.tips > ul > li > ul > li {
+    font-weight: 500;
+}
+
+.tips > ul > li > ul {
+    margin-left: 40px;
+}
+
+.tips > ul {
+    width: fit-content;
+    margin: 0 auto 0 6px;
+}
+
+.tips li {
+    margin: 16px 0px;
+}
+
+.chart-wrapper {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.h2-wrapper {
+    text-align: center;
 }
 
 header hr {
@@ -110,7 +140,7 @@ header hr {
     h1 {
         font-size: 2.7em;
     }
-    p, .list-item {
+    p, .list-item, .tips li {
         font-size: 24px;
         line-height: 32px;
     }
@@ -123,16 +153,16 @@ header hr {
     h1 {
         font-size: 3em;
     }
-    p, .list-item {
+    p, .list-item, .tips li {
         font-size: 26px;
         line-height: 34px;
     }   
     header hr {
         width: 50%;
     } 
-    .main-content {
+    /* .main-content {
         display: none;
-    }
+    } */
     .main-content-big {
         display: block;
     }
@@ -145,7 +175,7 @@ header hr {
     h1 {
         font-size: 3.2em;
     }
-    p, .list-item {
+    p, .list-item, .tips li {
         font-size: 26px;
         line-height: 34px;
     }   
@@ -161,7 +191,7 @@ header hr {
     h1 {
         font-size: 3.5em;
     }
-    p, .list-item {
+    p, .list-item, .tips li {
         font-size: 28px;
         line-height: 40px;
     }    
@@ -212,4 +242,9 @@ h2 {
 
 .list-item {
     margin: 4px 0;
+}
+
+.chart {
+    text-align: center;
+    margin: 40px 0;
 }

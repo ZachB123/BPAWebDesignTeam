@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/transportationStyle.css">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/script.js" defer></script>
+    <script src="../js/contentScript.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Transportation</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,8 +37,9 @@
                     </a>
                     <div id="dropdown">
                         <a href="transportation.html">Transportation</a>
-                        <a href="meat.html">Meat</a>
+                        <a href="food.html">Food</a>
                         <a href="goods.html">Goods</a>
+                        <a href="energy.html">Energy</a>
                     </div>
                 </li>
                 <li class="nav-item"><a href="carbonMap.html">Carbon Map</a></li>
@@ -55,8 +58,9 @@
             </span>
             <ul>  
                 <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="meat.html">Meat</a></li>
+                <li><a href="food.html">Food</a></li>
                 <li><a href="goods.html">Goods</a></li>   
+                <li><a href="energy.html">Energy</a></li>
                 <li><a href="carbonMap.html">Carbon Map</a></li>
                 <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
                 <li><a href="whyCare.html">Why Care?</a></li>
@@ -74,111 +78,61 @@
                 <img src="../images/transportation-hero.jpg" alt="">
             </div>
             <div class="description">
-                <p>&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae magnam velit corrupti cupiditate veniam. Voluptatem iste, nostrum modi doloremque quod earum consequuntur porro sit fugit unde nisi doloribus, ea voluptas.</p>
+                <p>&nbsp;&nbsp;Transportation is a key factor in rising carbon emissions and climate change. In fact, 29% of total US greenhouse gas emissions come from transportation, which is the largest contributor of total emissions. Why? For most transportation such as cars, trucks and planes to operate, they burn large amounts of fossil fuels like gasoline and diesel which releases carbon dioxide into the atmosphere. Growing levels of carbon dioxide have generated a significant greenhouse effect which has warmed the planet at a much faster rate than expected. </p>
             </div>
             <hr>
         </div>
     </header>
     <section class="main-content">
-        <div class="paragraph content-block">
-            <div class="heading">
-                <h2>Lorem Ipsum Dolor</h2>
-                <hr class="heading-line">
+        <div class="chart">
+            <h2>Total U.S Carbon Footprint Broken Down</h2>
+            <div class="chart-wrapper">
+                <canvas id="transportationPie"></canvas>
             </div>
-            <div class="text">
-                <p>&nbsp;&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nulla tempora minima laboriosam commodi assumenda officiis ullam, dolorum, beatae fugit, eum earum totam dignissimos sint ducimus. Quisquam quas sunt illum?</p>
-            </div>
+            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon. Transportation is bolded.</p>
         </div>
-        <div class="paragraph content-block">
-            <div class="heading">
-                <h2>Lorem Ipsum Dolor</h2>
-                <hr class="heading-line">
+        <div class="chart">
+            <h2>Carbon Footprint of Different Modes of Transportation</h2>
+            <div class="chart-wrapper">
+                <canvas id="modesOfTransportation"></canvas>
             </div>
-            <div class="text">
-                <p>&nbsp;&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nulla tempora minima laboriosam commodi assumenda officiis ullam, dolorum, beatae fugit, eum earum totam dignissimos sint ducimus. Quisquam quas sunt illum?</p>
-            </div>
+            <p>&nbsp;&nbsp;The chart above shows how different modes of transportation contribute differently to the carbon footpring. Cars and trucks, being the most universal mode of transportation, contribute the most to the United States carbon footprint. Vehicle emissions have been increasing every year and this trend is unlikely to change. However, as electric vehicles and renewable energy are becoming more common, there is hope for a cleaner future.</p>
         </div>
-        <div class="tips content-block">
-            <div class="heading">
-                <h2>Tips</h2>
-                <hr class="heading-line">
+        <div class="tips">
+            <div class="h2-wrapper">
+                <h2>Tips/Tricks</h2>
             </div>
-            <div class="list">
-                <ul>
-                    <li class="list-item">jkldfg jdslfg dljg;sdlhk kldjh djsflkh dfjslh</li>
-                    <li class="list-item">djfj dh jk dgkljdhfgkd dhfgkjhdslfkj g hkdjhgjkd ghlsdfjgjkjd gh</li>
-                    <li class="list-item">sjkg dshg dkfhgk dhflk dhfglk kd kdghklsdg</li>
-                    <li class="list-item">hsjkdf hsjs hfkjsh dkskdjfk jshfkjs hskj hgjkshgjkhdfjkgjkdh jkghdkjlf gdh gk jkgd</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="main-content-big">
-        <div class="content-section">
-            <div class="left column">
-                <div class="text-block">
-                    <div class="heading-block">
-                        <h2>Lorem Ipsum Dolor</h2>
-                    </div>
-                    <div class="paragraph-block">
-                        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi blanditiis deserunt ipsum aspernatur soluta magni ad cum dolorum, eos ea labore consectetur laborum autem, asperiores id dolores optio quas ducimus!
-                        Animi illo nihil veritatis ducimus vitae accusamus ex. Modi excepturi voluptas consectetur minus doloremque nam soluta officia harum nemo nostrum, similique mollitia magni maiores ipsa doloribus perferendis, qui quia tempore?</p>
-                    </div>
-                </div>
-                <div class="image-block">
-                    <img src="../images/transportation-hero.jpg" alt="transportation">
-                </div>
-            </div>
-            <div class="right column">
-                <div class="image-block">
-                    <img src="../images/transportation-hero.jpg" alt="transportation">
-                </div>
-                <div class="text-block">
-                    <div class="heading-block">
-                        <h2>Lorem Ipsum Dolor</h2>
-                    </div>
-                    <div class="paragraph-block">
-                        <p>&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam beatae vel recusandae, quos molestiae quasi! Sint dolorem impedit necessitatibus natus suscipit? Eligendi pariatur dicta facere velit nulla ullam explicabo repudiandae.
-                        Repellat dignissimos ipsum debitis tempora consequuntur, aspernatur blanditiis accusantium quidem cupiditate nemo labore, cumque illo suscipit. Quod, veniam? Rerum dolor beatae error deserunt labore cum vero officiis consequuntur ducimus quas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="main-content-big">
-        <div class="content-section">
-            <div class="left column">
-                <div class="text-block">
-                    <div class="heading-block">
-                        <h2>Lorem Ipsum Dolor</h2>
-                    </div>
-                    <div class="paragraph-block">
-                        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi blanditiis deserunt ipsum aspernatur soluta magni ad cum dolorum, eos ea labore consectetur laborum autem, asperiores id dolores optio quas ducimus!
-                        Animi illo nihil veritatis ducimus vitae accusamus ex. Modi excepturi voluptas consectetur minus doloremque nam soluta officia harum nemo nostrum, similique mollitia magni maiores ipsa doloribus perferendis, qui quia tempore?</p>
-                    </div>
-                </div>
-                <div class="image-block">
-                    <img src="../images/transportation-hero.jpg" alt="transportation">
-                </div>
-            </div>
-            <div class="right column">
-                <div class="image-block">
-                    <img src="../images/transportation-hero.jpg" alt="transportation">
-                </div>
-                <div class="text-block">
-                    <div class="heading-block">
-                        <h2>Tips</h2>
-                    </div>
-                    <div class="paragraph-block">
-                        <ul>
-                            <li class="list-item">jkldfg jdslfg dljg;sdlhk kldjh djsflkh dfjslh</li>
-                            <li class="list-item">djfj dh jk dgkljdhfgkd dhfgkjhdslfkj g hkdjhgjkd ghlsdfjgjkjd gh</li>
-                            <li class="list-item">sjkg dshg dkfhgk dhflk dhfglk kd kdghklsdg</li>
-                            <li class="list-item">hsjkdf hsjs hfkjsh dkskdjfk jshfkjs hskj hgjkshgjkhdfjkgjkdh jkghdkjlf gdh gk jkgd</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <ul>
+                <li>
+                    Traveling Short Distances
+                    <ul>
+                        <li>Walk or ride a bike</li>
+                        <li>Public transportation(buses and subways) because the more people traveling in a singular vehicle the smaller the carbon footprint</li>
+                        <li>Combine trips - run multiple errands at once or finish multiple events you have to do in one trip</li>
+                    </ul>
+                </li>
+                <li>
+                    Traveling Longer Distances
+                    <ul>
+                        <li>Trains</li>
+                        <li>Long-distance bus</li>
+                        <li>Replace short-flights with a car(carpool!)</li>
+                    </ul>
+                </li>
+                <li>
+                    If You Have to Fly
+                    <ul>
+                        <li>Take large commercial airliners with more people</li>
+                    </ul>
+                </li>
+                <li>
+                    Vehicle Alternatives
+                    <ul>
+                        <li>Drive an electric vehicle - they are a cleaner and greener option than gasoline as they prevent air pollution and cut fossil fuel use</li>
+                        <li>Use fuel-efficient vehicles</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </section>
     <footer>
@@ -196,11 +150,12 @@
                 <div class="links-left">
                     <a href="../index.html">Home</a>
                     <a href="transportation.html">Transportation</a>
-                    <a href="meat.html">Meat</a>
+                    <a href="food.html">Food</a>
                     <a href="goods.html">Goods</a>    
-                    <a href="carbonMap.html">Carbon Map</a>
+                    <a href="energy.html">Energy</a>
                 </div>
                 <div class="links-right">
+                    <a href="carbonMap.html">Carbon Map</a>
                     <a href="carbonCalculator.html">Carbon Calculator</a>
                     <a href="whyCare.html">Why Care?</a>
                     <a href="resources.html">Resources</a>

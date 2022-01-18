@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contentSyle.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/contentScript.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Food</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="../index.html">
+                <!-- <h2>ICB</h2> -->
+                <img src="../images/logo.png" alt="ICB Logo">
+            </a>   
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li class="nav-item">
+                    <a>
+                        Carbon Sources
+                        <i class="material-icons">expand_more</i>
+                    </a>
+                    <div id="dropdown">
+                        <a href="transportation.html">Transportation</a>
+                        <a href="food.html">Food</a>
+                        <a href="goods.html">Goods</a>
+                        <a href="energy.html">Energy</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="carbonMap.html">Carbon Map</a></li>
+                <li class="nav-item"><a href="carbonCalculator.html">Carbon Calculator</a></li>
+                <li class="nav-item"><a href="whyCare.html">Why Care?</a></li>
+                <li class="nav-item"><a href="resources.html">Resources</a></li>
+                <li class="nav-item"><a href="aboutUs.html">About Us</a></li>       
+            </ul>
+        </div>
+        <div class="hamburger">
+            <i class="material-icons">menu</i>
+        </div>
+        <div class="mobile-nav">
+            <span class="exit-mobile-nav">
+                <i class="material-icons">close</i>
+            </span>
+            <ul>  
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="goods.html">Goods</a></li>   
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="carbonMap.html">Carbon Map</a></li>
+                <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
+                <li><a href="whyCare.html">Why Care?</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="hero">
+            <div class="title">
+                <h1>Food</h1>
+            </div>
+            <div class="main-image">
+                <img src="../images/food-hero.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>&nbsp;&nbsp;</p>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="chart">
+            <h2>Total U.S Carbon Footprint Broken Down</h2>
+            <div class="chart-wrapper">
+                <canvas id="foodPie"></canvas>
+            </div>
+            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon. Food is bolded.</p>
+        </div>
+        <div class="chart">
+            <h2></h2>
+            <div class="chart-wrapper">
+                <canvas id=""></canvas>
+            </div>
+            <p>&nbsp;&nbsp;</p>
+        </div>
+        <div class="tips">
+            <div class="h2-wrapper">
+                <h2>Tips/Tricks</h2>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="email footer-item">
+            <div class="container">
+                <h3>Contact Us</h3>
+                <input id="name" type="text" placeholder="name">
+                <input id="email" type="email" placeholder="email">
+                <textarea placeholder="your message here"></textarea>
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="links footer-item">
+            <div class="container">
+                <div class="links-left">
+                    <a href="../index.html">Home</a>
+                    <a href="transportation.html">Transportation</a>
+                    <a href="food.html">Food</a>
+                    <a href="goods.html">Goods</a>    
+                    <a href="energy.html">Energy</a>
+                </div>
+                <div class="links-right">
+                    <a href="carbonMap.html">Carbon Map</a>
+                    <a href="carbonCalculator.html">Carbon Calculator</a>
+                    <a href="whyCare.html">Why Care?</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="aboutUs.html">About Us</a>
+                </div>
+            </div>
+        </div>  
+        <div class="social-media footer-item">
+            <div class="container">
+                <a href="https://gmail.google.com" target="_blank"><img src="../images/gmail.png" alt="gmail"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.png" alt="instagram"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="../images/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

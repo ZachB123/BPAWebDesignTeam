@@ -22,7 +22,7 @@ function openMobileNav(event) {
 
 //closes mobile navigations screen
 function closeMobileNav(event) {
-    mobileNav.style.top = "-400px";
+    mobileNav.style.top = "-430px";
 }
 
 ////////////////////////////////////////
