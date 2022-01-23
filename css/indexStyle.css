@@ -11,14 +11,16 @@
 
 header {
   position: relative;
-  background-image: url("../images/landscape-phone.png");
+  background-image: url("../images/landscape-phone-compressed.png");
   background-size: cover;
   min-height: 100vh;
+  box-shadow: 0 10px 14px rgb(34,34,34);
 }
 
 h1 {
   color: var(--heading-color);
   font-size: var(--heading-font-size);
+  text-shadow: 3px 3px var(--dark-green);
 }
 
 h2 {
@@ -123,7 +125,7 @@ h2 {
     --slogan-font-size: 1em;
   }
   header {
-    background-image: url("../images/landscape-tablet.png");
+    background-image: url("../images/landscape-tablet-compressed.png");
   }
   .spacer {
     height: 80px;
@@ -141,7 +143,7 @@ h2 {
     --slogan-font-size: 1.4em;
   }
   header {
-    background-image: url("../images/landscape-desktop.png");
+    background-image: url("../images/landscape-desktop-compressed.png");
   }
   .spacer {
     height: 60px;
