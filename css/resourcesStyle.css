@@ -11,22 +11,29 @@ main section {
     padding: 20px 0;
 }
 
-main ul {
+/* main ul {
     margin: 0 auto;
     width: fit-content;
 }
 
 main li {
     padding: 10px 0;
-    font-size: 30px;
+    font-size: 22px;
     color: rgb(0, 0, 0);
-    text-decoration: underline;
     cursor: pointer;
     width: fit-content;
+} */
+
+.link-parent-container {
+    text-align: center;
 }
 
-main li a {
-    color: rgb(54, 47, 93);
+main a {
+    all: revert;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 0;
+    font-size: 22px;
 }
 
 .works-cited {
@@ -48,8 +55,8 @@ main li a {
         width: 80%;
         margin: 0 auto;
     }
-    main li {
-        font-size: 34px;
+    main a {
+        font-size: 30px;
     }
 }
 
@@ -58,16 +65,12 @@ main li a {
         width: 60%;
         margin: 0 auto;
     }
-    main li {
+    main a {
         font-size: 36px;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .resource-links {
-        display: flex;
-        justify-content: space-around;
-    }
     main {
         width: 100%;
         margin: 0 auto;
@@ -75,7 +78,7 @@ main li a {
 }
 
 @media only screen and (min-width: 1200px) {
-    main li {
+    main a {
         font-size: 38px;
     }
 }
