@@ -11,20 +11,25 @@
     <script src="../js/contentScript.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Food</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <!-- charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <nav>
         <div class="nav-left">
             <a href="../index.html">
                 <!-- <h2>ICB</h2> -->
-                <img src="../images/logo.png" alt="ICB Logo">
+                <img src="../images/FinalLogo.png" alt="ICB Logo">
             </a>   
         </div>
         <div class="nav-right">
@@ -77,7 +82,8 @@
                 <img src="../images/food-hero.jpg" alt="">
             </div>
             <div class="description">
-                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp;&nbsp;Production and transportation of food products account for 14% of total global greenhouse gas emissions. Meat alone accounts for almost 8% of total global greenhouse gas emissions. While this may not seem like a large percentage, it is quickly on the rise due to higher demand for food products and is on track to reach 20-30% of total greenhouse gas emissions in the near future.    But in fact, food production is ALREADY largely contributing to global warming as it produces the most methane. Methane is the principal contributor to ozone, a dangerous air pollutant that kills one million people each year.
+                </p>
             </div>
             <hr>
         </div>
@@ -85,22 +91,54 @@
     <section class="main-content">
         <div class="chart">
             <h2>Total U.S Carbon Footprint Broken Down</h2>
-            <div class="chart-wrapper">
-                <canvas id="foodPie"></canvas>
-            </div>
-            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon. Food is bolded.</p>
+            <div class="google-chart" id="foodPie"></div>
+            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon.</p>
         </div>
         <div class="chart">
-            <h2></h2>
-            <div class="chart-wrapper">
-                <canvas id=""></canvas>
-            </div>
-            <p>&nbsp;&nbsp;</p>
+            <h2>Carbon Footprint of Different Foods</h2>
+            <div class="google-chart" id="foodTypes"></div>
+            <p>&nbsp;&nbsp;As you can see, meats produce the most emissions out of everything else combined. This is because animals contain a special bacteria which helps them easily consume grass. Every time they consume grass, these animals emit a lot of methane which contributes to global emissions. In contrast, veggies are extremely low on emissions as they don’t produce much methane or greenhouse gasses. Dairy also has a somewhat high percentage because dairy products are almost always from cows. Again, cows are a mega-source when it comes to methane.</p>
         </div>
         <div class="tips">
             <div class="h2-wrapper">
                 <h2>Tips/Tricks</h2>
             </div>
+            <ul>
+                <li>
+                    Switch to a vegetarian diet as it reduces a person’s carbon footprint considerably
+                    <ul>
+                        <li>This is a hard switch, so switching to less carbon-intensive meats can also have a significant impact.</li>
+                        <li>Beef, for example, emits 7.2 times more greenhouse gasses per kilogram than chicken.</li>
+                        <li>Try plant-based protein: Studies show people with the lowest carbon footprint had the highest intake of plant-based protein and products</li>
+                    </ul>
+                </li>
+                <li>
+                    Stop wasting food
+                    <ul>
+                        <li>Thrown away food ends up in landfills and emits methane</li>
+                    </ul>
+                </li>
+                <li>
+                    Ditch the plastic
+                    <ul>
+                        <li>Plastic bags, wrapping, containers are used by the food industry to produce, package and transport food products</li>
+                    </ul>
+                </li>
+                <li>
+                    Cut back on dairy
+                    <ul>
+                        <li>Some products from the dairy sector (cheese) use so much milk to produce, it’s associated with a higher carbon footprint than some animal products such as pork and chicken</li>
+                        <li>Only behind on meat when it comes to overall greenhouse gas emissions</li>
+                    </ul>
+                </li>
+                <li>
+                    Eat more fiber-rich Foods
+                    <ul>
+                        <li>Improves your digestive health, helps weight loss, balances gut bacteria, protects against serious illnesses (heart disease, cancer)</li>
+                    </ul>
+                </li>
+                <li>Grow your own produce</li>
+            </ul> 
         </div>
     </section>
     <footer>
@@ -140,5 +178,55 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" defer>
+        window.addEventListener("resize", drawChart);
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            {
+                let options = {
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Carbon Source");
+                data.addColumn("number", "Percentage");
+                data.addRows([
+                    ["Transportation", 0.29],
+                    ["Energy", 0.26],
+                    ["Goods", 0.30],
+                    ["Food", 0.15],
+                ]);
+                let chart = new google.visualization.PieChart(document.querySelector("#foodPie"));
+                chart.draw(data, options);
+            } 
+            {
+                let options = {
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Food Type");
+                data.addColumn("number", "Percentage");
+                data.addRows([
+                    ["Meats", 0.586],
+                    ["Dairy", 0.183],
+                    ["Beverages", 0.059],
+                    ["Fish and Seafood", 0.058],
+                    ["Eggs", 0.028],
+                    ["Vegetables", 0.02],
+                    ["Grain", 0.021],
+                    ["Fruits", 0.016],
+                    ["Other", 0.043]
+                ]);
+                let chart = new google.visualization.PieChart(document.querySelector("#foodTypes"));
+                chart.draw(data, options);
+            }
+        }
+    </script>
 </body>
 </html>

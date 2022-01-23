@@ -10,21 +10,26 @@
     <script src="../js/script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script src="../js/contentScript.js" defer></script>
-    <title>Food</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <title>Goods</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <!-- charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <nav>
         <div class="nav-left">
             <a href="../index.html">
                 <!-- <h2>ICB</h2> -->
-                <img src="../images/logo.png" alt="ICB Logo">
+                <img src="../images/FinalLogo.png" alt="ICB Logo">
             </a>   
         </div>
         <div class="nav-right">
@@ -85,16 +90,12 @@
     <section class="main-content">
         <div class="chart">
             <h2>Total U.S Carbon Footprint Broken Down</h2>
-            <div class="chart-wrapper">
-                <canvas id="goodsPie"></canvas>
-            </div>
+            <div class="google-chart" id="goodsPie"></div>
             <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon. Food is bolded.</p>
         </div>
         <div class="chart">
             <h2>Carbon Emissions of Various Companies</h2>
-            <div class="chart-wrapper">
-                <canvas id="companiesChart"></canvas>
-            </div>
+            <div class="google-chart" id="companyEmissions"></div>
             <p>&nbsp;&nbsp;The corporations that you buy products from contribute to carbon dioxide in large amounts. However, most of these companies are taking steps to reduce their carbon footprint and signs are showing that it is working. Most companies are down millions of metric tons since a few years before 2020.</p>
         </div>
         <div class="tips">
@@ -171,5 +172,53 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" defer>
+        window.addEventListener("resize", drawChart);
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            {
+                let options = {
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Carbon Source");
+                data.addColumn("number", "Percentage");
+                data.addRows([
+                    ["Transportation", 0.29],
+                    ["Energy", 0.26],
+                    ["Goods", 0.30],
+                    ["Food", 0.15],
+                ]);
+                let chart = new google.visualization.PieChart(document.querySelector("#goodsPie"));
+                chart.draw(data, options);
+            } 
+            {
+                let options = {
+                    title: "Company Co2 Emissions in Million Metric Tons of Co2",
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Company");
+                data.addColumn("number", "Co2");
+                data.addRows([
+                    ["Target", 0.238],
+                    ["7-11", 2.2],
+                    ["Costco", 2.66],
+                    ["Walmart", 17.6],
+                    ["Amazon", 60.64],
+                    ["ExxonMobil", 120],
+                ]);
+                let chart = new google.visualization.ColumnChart(document.querySelector("#companyEmissions"));
+                chart.draw(data, options);
+            }
+        }
+    </script>
 </body>
 </html>

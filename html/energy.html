@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contentSyle.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/contentScript.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Energy</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="../index.html">
+                <!-- <h2>ICB</h2> -->
+                <img src="../images/FinalLogo.png" alt="ICB Logo">
+            </a>   
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li class="nav-item">
+                    <a>
+                        Carbon Sources
+                        <i class="material-icons">expand_more</i>
+                    </a>
+                    <div id="dropdown">
+                        <a href="transportation.html">Transportation</a>
+                        <a href="food.html">Food</a>
+                        <a href="goods.html">Goods</a>
+                        <a href="energy.html">Energy</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="carbonMap.html">Carbon Map</a></li>
+                <li class="nav-item"><a href="carbonCalculator.html">Carbon Calculator</a></li>
+                <li class="nav-item"><a href="whyCare.html">Why Care?</a></li>
+                <li class="nav-item"><a href="resources.html">Resources</a></li>
+                <li class="nav-item"><a href="aboutUs.html">About Us</a></li>       
+            </ul>
+        </div>
+        <div class="hamburger">
+            <i class="material-icons">menu</i>
+        </div>
+        <div class="mobile-nav">
+            <span class="exit-mobile-nav">
+                <i class="material-icons">close</i>
+            </span>
+            <ul>  
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="goods.html">Goods</a></li>   
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="carbonMap.html">Carbon Map</a></li>
+                <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
+                <li><a href="whyCare.html">Why Care?</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="hero">
+            <div class="title">
+                <h1>Energy</h1>
+            </div>
+            <div class="main-image">
+                <img src="../images/energy-hero.jpg" alt="Energy">
+            </div>
+            <div class="description">
+                <p></p>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="chart">
+            <h2>Total U.S Carbon Footprint Broken Down</h2>
+            <div class="google-chart" id="energyPie"></div>
+            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon.</p>
+        </div>
+        <div class="chart">
+            <h2>Energy Consumption of Various Energy Sources</h2>
+            <div class="google-chart" id="energyOverTime"></div>
+            <p>&nbsp;&nbsp;The Graph above shows the energy consumption since 1950, and the different types of energy sources used.</p>
+        </div>
+        <div class="tips">
+            <div class="h2-wrapper">
+                <h2>Tips/Tricks</h2>
+            </div>
+            <ul style="list-style-type: none;">
+                <li>
+                    <ul>
+                        <li>Installing solar panels can reduce your carbon footprint</li>
+                        <li>Using energy efficient appliances with ratings of B or higher.</li>
+                        <li>Make sure to turn off your lights when not in use.</li>
+                        <li>Make sure to only use the dishwasher or washing machine when they are full.</li>
+                        <li>Don’t leave appliances plugged in when you go on vacation or won’t be using them for a while.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="email footer-item">
+            <div class="container">
+                <h3>Contact Us</h3>
+                <input id="name" type="text" placeholder="name">
+                <input id="email" type="email" placeholder="email">
+                <textarea placeholder="your message here"></textarea>
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="links footer-item">
+            <div class="container">
+                <div class="links-left">
+                    <a href="../index.html">Home</a>
+                    <a href="transportation.html">Transportation</a>
+                    <a href="food.html">Food</a>
+                    <a href="goods.html">Goods</a>    
+                    <a href="energy.html">Energy</a>
+                </div>
+                <div class="links-right">
+                    <a href="carbonMap.html">Carbon Map</a>
+                    <a href="carbonCalculator.html">Carbon Calculator</a>
+                    <a href="whyCare.html">Why Care?</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="aboutUs.html">About Us</a>
+                </div>
+            </div>
+        </div>  
+        <div class="social-media footer-item">
+            <div class="container">
+                <a href="https://gmail.google.com" target="_blank"><img src="../images/gmail.png" alt="gmail"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.png" alt="instagram"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="../images/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" defer>
+        window.addEventListener("resize", drawChart);
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            {
+                let options = {
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Carbon Source");
+                data.addColumn("number", "Percentage");
+                data.addRows([
+                    ["Transportation", 0.29],
+                    ["Energy", 0.26],
+                    ["Goods", 0.30],
+                    ["Food", 0.15],
+                ]);
+                let chart = new google.visualization.PieChart(document.querySelector("#energyPie"));
+                chart.draw(data, options);
+            } 
+            {
+                let options = {
+                    title: "Quadrillion British Thermal Units",
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    hAxis: {
+                        title: "Year",
+                    },
+                    vAxis: {
+                        title: "Energy Used",
+                    },
+                    curveType: "function",
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "year");
+                data.addColumn("number","Coal");
+                data.addColumn("number","Natural Gas");
+                data.addColumn("number","Petroleum");
+                data.addColumn("number","Nuclear");
+                data.addColumn("number","Renewable");
+
+                data.addRows([
+                    ["1950",	12.347,	5.968,	13.298,	0,	2.978],
+                    ["1951",	12.553,	7.049,	14.408,	0,	2.958],
+                    ["1953",	11.373,	7.907,	15.532,	0,	2.831],
+                    ["1952",	11.306,	7.55,	14.934,	0,	2.94],
+                    ["1954",	9.715,	8.33,	15.813,	0,	2.754],
+                    ["1955",	11.167,	8.998,	17.225,	0,	2.784],
+                    ["1956",	11.35,	9.614,	17.905,	0,	2.851],
+                    ["1957",	10.821,	10.191,	17.898,	0,	2.849],
+                    ["1958",	9.533,	10.663,	18.491,	0.002,	2.915],
+                    ["1959",	9.518,	11.717,	19.28,	0.002,	2.901],
+                    ["1960",	9.838,	12.385,	19.874,	0.006,	2.928],
+                    ["1961",	9.623,	12.926,	20.169,	0.02,	2.952],
+                    ["1962",	9.906,13.731,	20.998,	0.026,	3.117],
+                    ["1963",	10.413,	14.403,	21.645,	0.038,	3.096],
+                    ["1964",	10.964,	15.288,	22.242,	0.04,	3.225],
+                    ["1965",	11.581,	15.769,	23.184,	0.043,	3.396],
+                    ["1966",	12.143,	16.995,	24.335,	0.064,	3.432],
+                    ["1967",	11.914,	17.945,	25.274,	0.088,	3.69],
+                    ["1968",	12.331,	19.21,	26.966,	0.142,	3.773],
+                    ["1969",	12.382,	20.678,	28.321,	0.154,	4.095],
+                    ["1970",	12.265,	21.795,	29.499,	0.239,	4.07],
+                    ["1971",	11.598,	22.469,	30.539,	0.413,	4.262],
+                    ["1972",	12.077,	22.698,	32.919,	0.584,	4.382],
+                    ["1973",	12.971,	22.512,	34.806,	0.91,	4.411],
+                    ["1974",	12.663,	21.732,	33.421,	1.272,	4.742],
+                    ["1975",	12.663,	19.948,	32.699,	1.9,	4.687],
+                    ["1976",	13.584,	20.345,	35.142,	2.111,	4.727],
+                    ["1977",	13.922,	19.931,	37.083,	2.702,	4.209],
+                    ["1978",	13.766,	20,	37.919,	3.024,	5.005],
+                    ["1979",	15.04,  20.666,	37.075,	2.776,	5.123],
+                    ["1980",	15.423,	20.235,	34.159,	2.739,	5.428],
+                    ["1981",	15.908,	19.747,	31.884,	3.008,	5.414],
+                    ["1982",	15.322,	18.356,	30.179,	3.131,	5.98],
+                    ["1983",	15.894,	17.221,	29.997,	3.203,	6.496],
+                    ["1984",	17.071,	18.394,	30.992,	3.553,	6.438],
+                    ["1985",	17.478,	17.703,	30.866,	4.076,	6.084],
+                    ["1986",	17.26,16.591,	32.15,	4.38,	6.111],
+                    ["1987",	18.008,	17.64,	32.817,	4.754,	5.622],
+                    ["1988",	18.846,	18.448,	34.173,	5.587,	5.457],
+                    ["1989",	19.07, 19.602,	34.164,	5.602,	6.235],
+                    ["1990",	19.173,	19.603,	33.5,	6.104,	6.04],
+                    ["1991",	18.992,	20.033,	32.789,	6.422,	6.068],
+                    ["1992",	19.122,	20.714,	33.468,	6.479,	5.821],
+                    ["1993",	19.835,	21.229,	33.588,	6.41,	6.082],
+                    ["1994",	19.909,	21.728,	34.453,	6.694,	5.987],
+                    ["1995",	20.089,	22.671,	34.341,	7.075,	6.559],
+                    ["1996",	21.002,	23.085,	35.589,	7.087,	7.012],
+                    ["1997",	21.445,	23.223,	36.065,	6.597,	7.014],
+                    ["1998",	21.656,	22.83,	36.72,	7.068,	6.491],
+                    ["1999",	21.623,	22.909,	37.732,	7.61,	6.514],
+                    ["2000",	22.58, 23.824,	38.152,	7.862,	6.104],
+                    ["2001",	21.914,	22.773,	38.084,	8.029,	5.16],
+                    ["2002",	21.904,	23.51,	38.117,	8.145,	5.726],
+                    ["2003",	22.321,	22.831,	38.707,	7.96,	5.944],
+                    ["2004",	22.466,	22.923,	40.139,	8.223,	6.075],
+                    ["2005",	22.797,	22.565,	40.217,	8.161,	6.234],
+                    ["2006",	22.447,	22.239,	39.731,	8.215,	6.637],
+                    ["2007",	22.749,	23.663,	39.368,	8.459,	6.523],
+                    ["2008",	22.387,	23.843,	36.769,	8.426,	7.175],
+                    ["2009",	19.691,	23.416,	34.779,	8.355,	7.608],
+                    ["2010",	20.834,	24.575,	35.321,	8.434,	8.267],
+                    ["2011",	19.658,	24.955,	34.639,	8.269,	9.204],
+                    ["2012",	17.378,	26.089,	33.833,	8.062,	8.847],
+                    ["2013",	18.039,	26.805,	34.398,	8.244,	9.451],
+                    ["2014",	17.998,	27.383,	34.658,	8.338,	9.74],
+                    ["2015",	15.549,	28.191,	35.368,	8.337,	9.72],
+                    ["2016",	14.226,	28.4,	35.712,	8.427,	10.365],
+                    ["2017",	13.837,	28.055,	36.043,	8.419,	11.08],
+                    ["2018",	13.252,	31.153,	36.892,	8.438,	11.302],
+                    ["2019",	11.316,	32.197,	36.866,	8.452,	11.35],
+                    ["2020",	9.182, 31.544,	32.231,	8.248,	11.59],
+                ]);
+
+                let chart = new google.visualization.LineChart(document.querySelector("#energyOverTime"));
+                chart.draw(data, options);
+                
+            }
+        }
+    </script>
+</body>
+</html>

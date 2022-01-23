@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,24 +10,31 @@
     <link rel="stylesheet" href="../css/transportationStyle.css">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/script.js" defer></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js" integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="../js/contentScript.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Transportation</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <!-- charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
+
 <body>
     <nav>
         <div class="nav-left">
             <a href="../index.html">
                 <!-- <h2>ICB</h2> -->
-                <img src="../images/logo.png" alt="ICB Logo">
-            </a>   
+                <img src="../images/FinalLogo.png" alt="ICB Logo">
+            </a>
         </div>
         <div class="nav-right">
             <ul>
@@ -46,7 +54,7 @@
                 <li class="nav-item"><a href="carbonCalculator.html">Carbon Calculator</a></li>
                 <li class="nav-item"><a href="whyCare.html">Why Care?</a></li>
                 <li class="nav-item"><a href="resources.html">Resources</a></li>
-                <li class="nav-item"><a href="aboutUs.html">About Us</a></li>       
+                <li class="nav-item"><a href="aboutUs.html">About Us</a></li>
             </ul>
         </div>
         <div class="hamburger">
@@ -56,10 +64,10 @@
             <span class="exit-mobile-nav">
                 <i class="material-icons">close</i>
             </span>
-            <ul>  
+            <ul>
                 <li><a href="transportation.html">Transportation</a></li>
                 <li><a href="food.html">Food</a></li>
-                <li><a href="goods.html">Goods</a></li>   
+                <li><a href="goods.html">Goods</a></li>
                 <li><a href="energy.html">Energy</a></li>
                 <li><a href="carbonMap.html">Carbon Map</a></li>
                 <li><a href="carbonCalculator.html">Carbon Calculator</a></li>
@@ -78,7 +86,12 @@
                 <img src="../images/transportation-hero.jpg" alt="">
             </div>
             <div class="description">
-                <p>&nbsp;&nbsp;Transportation is a key factor in rising carbon emissions and climate change. In fact, 29% of total US greenhouse gas emissions come from transportation, which is the largest contributor of total emissions. Why? For most transportation such as cars, trucks and planes to operate, they burn large amounts of fossil fuels like gasoline and diesel which releases carbon dioxide into the atmosphere. Growing levels of carbon dioxide have generated a significant greenhouse effect which has warmed the planet at a much faster rate than expected. </p>
+                <p>&nbsp;&nbsp;Transportation is a key factor in rising carbon emissions and climate change. In fact,
+                    29% of total US greenhouse gas emissions come from transportation, which is the largest contributor
+                    of total emissions. Why? For most transportation such as cars, trucks and planes to operate, they
+                    burn large amounts of fossil fuels like gasoline and diesel which releases carbon dioxide into the
+                    atmosphere. Growing levels of carbon dioxide have generated a significant greenhouse effect which
+                    has warmed the planet at a much faster rate than expected. </p>
             </div>
             <hr>
         </div>
@@ -86,17 +99,17 @@
     <section class="main-content">
         <div class="chart">
             <h2>Total U.S Carbon Footprint Broken Down</h2>
-            <div class="chart-wrapper">
-                <canvas id="transportationPie"></canvas>
-            </div>
-            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon. Transportation is bolded.</p>
+            <div class="google-chart" id="transportationPie"></div>
+            <p>&nbsp;&nbsp;The chart above shows how varying sources produce different amounts of carbon.</p>
         </div>
         <div class="chart">
             <h2>Carbon Footprint of Different Modes of Transportation</h2>
-            <div class="chart-wrapper">
-                <canvas id="modesOfTransportation"></canvas>
-            </div>
-            <p>&nbsp;&nbsp;The chart above shows how different modes of transportation contribute differently to the carbon footpring. Cars and trucks, being the most universal mode of transportation, contribute the most to the United States carbon footprint. Vehicle emissions have been increasing every year and this trend is unlikely to change. However, as electric vehicles and renewable energy are becoming more common, there is hope for a cleaner future.</p>
+            <div class="google-chart" id="transportationModes"></div>
+            <p>&nbsp;&nbsp;The chart above shows how different modes of transportation contribute differently to the
+                carbon footpring. Cars and trucks, being the most universal mode of transportation, contribute the most
+                to the United States carbon footprint. Vehicle emissions have been increasing every year and this trend
+                is unlikely to change. However, as electric vehicles and renewable energy are becoming more common,
+                there is hope for a cleaner future.</p>
         </div>
         <div class="tips">
             <div class="h2-wrapper">
@@ -107,8 +120,10 @@
                     Traveling Short Distances
                     <ul>
                         <li>Walk or ride a bike</li>
-                        <li>Public transportation(buses and subways) because the more people traveling in a singular vehicle the smaller the carbon footprint</li>
-                        <li>Combine trips - run multiple errands at once or finish multiple events you have to do in one trip</li>
+                        <li>Public transportation(buses and subways) because the more people traveling in a singular
+                            vehicle the smaller the carbon footprint</li>
+                        <li>Combine trips - run multiple errands at once or finish multiple events you have to do in one
+                            trip</li>
                     </ul>
                 </li>
                 <li>
@@ -128,7 +143,8 @@
                 <li>
                     Vehicle Alternatives
                     <ul>
-                        <li>Drive an electric vehicle - they are a cleaner and greener option than gasoline as they prevent air pollution and cut fossil fuel use</li>
+                        <li>Drive an electric vehicle - they are a cleaner and greener option than gasoline as they
+                            prevent air pollution and cut fossil fuel use</li>
                         <li>Use fuel-efficient vehicles</li>
                     </ul>
                 </li>
@@ -151,7 +167,7 @@
                     <a href="../index.html">Home</a>
                     <a href="transportation.html">Transportation</a>
                     <a href="food.html">Food</a>
-                    <a href="goods.html">Goods</a>    
+                    <a href="goods.html">Goods</a>
                     <a href="energy.html">Energy</a>
                 </div>
                 <div class="links-right">
@@ -162,15 +178,64 @@
                     <a href="aboutUs.html">About Us</a>
                 </div>
             </div>
-        </div>  
+        </div>
         <div class="social-media footer-item">
             <div class="container">
                 <a href="https://gmail.google.com" target="_blank"><img src="../images/gmail.png" alt="gmail"></a>
-                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" alt="facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.png" alt="instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.png"
+                        alt="instagram"></a>
                 <a href="https://twitter.com/" target="_blank"><img src="../images/twitter.png" alt="twitter"></a>
             </div>
         </div>
     </footer>
+    <script type="text/javascript" defer>
+        window.addEventListener("resize", drawChart);
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            {
+                let options = {
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Carbon Source");
+                data.addColumn("number", "Percentage");
+                data.addRows([
+                    ["Transportation", 0.29],
+                    ["Energy", 0.26],
+                    ["Goods", 0.30],
+                    ["Food", 0.15],
+                ]);
+                let chart = new google.visualization.PieChart(document.querySelector("#transportationPie"));
+                chart.draw(data, options);
+            }
+            {
+                let options = {
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Transportation Mode");
+                data.addColumn("number", "Percentage");
+                data.addRows([
+                    ["Trucks", 0.34],
+                    ["Cars", 0.4],
+                    ["Planes", 0.11],
+                    ["Boats", 0.11],
+                    ["Other", 0.04]
+                ]);
+                let chart = new google.visualization.BarChart(document.querySelector("#transportationModes"));
+                chart.draw(data, options);
+            }
+        }
+    </script>
 </body>
+
 </html>
