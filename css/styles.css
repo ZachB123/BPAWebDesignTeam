@@ -421,3 +421,34 @@ footer h3 {
     font-size: 30px;
   }
 }
+
+.next-previous-page {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-previous-page button {
+  padding: 0.6em 1.2em;
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 100vh;
+}
+
+.next-previous-page button:hover {
+  background-color: var(--dark-green);
+}
+
+.next-previous-page button:hover a{
+  color: #fff;
+}
+
+.next-previous-page a {
+  font-size: 1.3em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .next-previous-page {
+      justify-content: space-around;
+  }        
+}

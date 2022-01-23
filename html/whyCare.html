@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contentSyle.css">
     <script src="../js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="../js/contentScript.js" defer></script>
     <title>Why Care?</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -18,6 +21,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <!-- charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <nav>
@@ -58,8 +63,8 @@
             <ul>  
                 <li><a href="transportation.html">Transportation</a></li>
                 <li><a href="food.html">Food</a></li>
-                <li><a href="goods.html">Goods</a></li>  
-                <li><a href="energy.html">Energy</a></li> 
+                <li><a href="goods.html">Goods</a></li>   
+                <li><a href="energy.html">Energy</a></li>
                 <!-- <li><a href="carbonMap.html">Carbon Map</a></li>
                 <li><a href="carbonCalculator.html">Carbon Calculator</a></li> -->
                 <li><a href="whyCare.html">Why Care?</a></li>
@@ -68,5 +73,260 @@
             </ul>
         </div>
     </nav>
+    <header>
+        <div class="hero">
+            <div class="title">
+                <h1>Why Care?</h1>
+            </div>
+            <div class="main-image">
+                <img src="../images/why-care-hero.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>&nbsp;&nbsp;Why should we care about reducing our carbon footprints? Carbon causes the greenhouse effect where the sun's energy gets trapped inside the atmosphere thereby increasing global tempuratures. Increased global tempuratures have consquences everywhere on the planet from rising sea levels to extinction of species and more severe weather.</p>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="chart">
+            <h2>Temperature Over Time</h2>
+            <div class="google-chart" id="temperature"></div>
+            <p>&nbsp;&nbsp;Carbon trapped in the atmosphere makes it harder for the sun's energy to escape which causes global temperatures to increase. This increase of tempurature over time is know as global warming.</p>
+        </div>
+        <div class="chart">
+            <h2>Sea Levels Over Time</h2>
+            <div class="google-chart" id="seaLevel"></div>
+            <p>&nbsp;&nbsp;The chart shows how sea levels have been steadily rising since 1993. The water comes from the polar ice caps that are melting. Increasing water levels could completely wipe out many small islands.</p>
+        </div>
+        <div class="chart">
+            <h2>Recorded Tornadoes in U.S</h2>
+            <div class="google-chart" id="tornado"></div>
+            <p>&nbsp;&nbsp;Tornadoes are one of the many consequences of rising tempuratures. Tornadoes can be extremely deadly and cause millions of dollars in damages. Reducing your carbon footprint could save lives.</p>
+        </div>
+    </section>
+    <section class="next-previous-page">
+        <div class="left">
+            <button class="previous">
+                <a href="energy.html">Previous Page</a>
+            </button>
+        </div>
+        <div class="right">
+            <button class="next">
+                <a href="resources.html">Next Page</a>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="email footer-item">
+            <div class="container">
+                <h3>Contact Us</h3>
+                <input id="name" type="text" placeholder="name">
+                <input id="email" type="email" placeholder="email">
+                <textarea placeholder="your message here"></textarea>
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="links footer-item">
+            <div class="container">
+                <div class="links-left">
+                    <a href="../index.html">Home</a>
+                    <a href="transportation.html">Transportation</a>
+                    <a href="food.html">Food</a>
+                    <a href="goods.html">Goods</a>    
+                    <!-- <a href="energy.html">Energy</a> -->
+                </div>
+                <div class="links-right">
+                    <a href="energy.html">Energy</a>
+                    <!-- <a href="carbonMap.html">Carbon Map</a>
+                    <a href="carbonCalculator.html">Carbon Calculator</a> -->
+                    <a href="whyCare.html">Why Care?</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="aboutUs.html">About Us</a>
+                </div>
+            </div>
+        </div>  
+        <div class="social-media footer-item">
+            <div class="container">
+                <a href="https://gmail.google.com" target="_blank"><img src="../images/gmail.png" alt="gmail"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.png" alt="instagram"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="../images/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" defer>
+        window.addEventListener("resize", drawChart);
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            {
+                let options = {
+                    title: "Change in Surface Tempurature Relative to 1951-1980 Average Temperatures",
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    curveType: "function",
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Year");
+                data.addColumn("number", "Temperature Celcius");
+                data.addRows([
+                    ["1880",-0.16],
+                    ["1890",-0.35],
+                    ["1900",-0.08],
+                    ["1910",-0.43],
+                    ["1920",-0.27],
+                    ["1930",-0.15],
+                    ["1940",0.13],
+                    ["1950",-0.17],
+                    ["1960",-0.03],
+                    ["1970",0.03],
+                    ["1980",0.26],
+                    ["1990",0.45],
+                    ["2000",0.39],
+                    ["2010",0.72],
+                    ["2020",1.02],
+                ]);
+                let chart = new google.visualization.LineChart(document.querySelector("#temperature"));
+                chart.draw(data, options);
+            }
+            {
+                let options = {
+                    title: "Increase in Millimeters Since 1993",
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    curveType: "function",
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Year");
+                data.addColumn("number", "Sea Level");
+                data.addRows([
+                    ["1993", 0.0],
+                    ["1994", 5.3],
+                    ["1995", 9.8],
+                    ["1996", 11.5],
+                    ["1997", 12.3],
+                    ["1998", 18.5],
+                    ["1999", 13.9],
+                    ["2000", 21.2],
+                    ["2001", 23.9],
+                    ["2002", 28.2],
+                    ["2003", 34.0],
+                    ["2004", 37.0],
+                    ["2005", 39.3],
+                    ["2006", 42.8],
+                    ["2007", 44.1],
+                    ["2008", 43.7],
+                    ["2009", 47.7],
+                    ["2010", 53.3],
+                    ["2011", 48.6],
+                    ["2012", 56.5],
+                    ["2013", 65.7],
+                    ["2014", 71.9],
+                    ["2015", 76.2],
+                    ["2016", 83.4],
+                    ["2017", 80.7],
+                    ["2018", 86.1],
+                    ["2019", 90.2],
+                    ["2020", 93.2],
+                    ["2021", 97.4],
+                    ["2022", 102.1],
+                ]);
+                let chart = new google.visualization.LineChart(document.querySelector("#seaLevel"));
+                chart.draw(data, options);
+            } 
+            {
+                let options = {
+                    title: "Tornadoes Every Year Since 1950",
+                    height: 400,
+                    backgroundColor: 'transparent',
+                    is3D: true,
+                    curveType: "function",
+                    // colors: [],
+                };
+                let data = new google.visualization.DataTable();
+                data.addColumn("string", "Year");
+                data.addColumn("number", "Number of Tornados");
+                data.addRows([
+                    ["1950",201],
+                    ["1951",260],
+                    ["1952",240],
+                    ["1953",422],
+                    ["1954",550],
+                    ["1955",591],
+                    ["1956",504],
+                    ["1957",857],
+                    ["1958",564],
+                    ["1959",602],
+                    ["1960",616],
+                    ["1961",698],
+                    ["1962",656],
+                    ["1963",462],
+                    ["1964",706],
+                    ["1965",900],
+                    ["1966",585],
+                    ["1967",927],
+                    ["1968",661],
+                    ["1969",607],
+                    ["1970",654],
+                    ["1971",888],
+                    ["1972",740],
+                    ["1973",1104],
+                    ["1974",951],
+                    ["1975",918],
+                    ["1976",837],
+                    ["1977",854],
+                    ["1978",789],
+                    ["1979",859],
+                    ["1980",866],
+                    ["1981",782],
+                    ["1982",1049],
+                    ["1983",930],
+                    ["1984",912],
+                    ["1985",687],
+                    ["1986",765],
+                    ["1987",658],
+                    ["1988",700],
+                    ["1989",859],
+                    ["1990",1140],
+                    ["1991",1133],
+                    ["1992",1302],
+                    ["1993", 1174],
+                    ["1994", 1085],
+                    ["1995", 1236],
+                    ["1996", 1172],
+                    ["1997", 1149],
+                    ["1998", 1428],
+                    ["1999", 1342],
+                    ["2000", 1073],
+                    ["2001", 1212],
+                    ["2002", 934],
+                    ["2003", 1385],
+                    ["2004", 1813],
+                    ["2005", 1262],
+                    ["2006", 1106],
+                    ["2007", 1100],
+                    ["2008", 1692],
+                    ["2009", 1146],
+                    ["2010", 1282],
+                    ["2011", 1691],
+                    ["2012", 938],
+                    ["2013", 906],
+                    ["2014", 886],
+                    ["2015", 1177],
+                    ["2016", 976],
+                    ["2017", 1429],
+                    ["2018", 1126],
+                    ["2019", 1517],
+                    ["2020", 1075],
+                ]);
+                let chart = new google.visualization.ColumnChart(document.querySelector("#tornado"));
+                chart.draw(data, options);
+            } 
+        }
+    </script>
 </body>
 </html>
