@@ -10,11 +10,20 @@
 }
 
 header {
-  position: relative;
+  position: fixed;
   background-image: url("../images/landscape-phone-compressed.png");
   background-size: cover;
   min-height: 100vh;
   box-shadow: 0 10px 14px rgb(34,34,34);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.content-container {
+  position: absolute;
+  top: 100vh;
 }
 
 h1 {
@@ -161,6 +170,7 @@ h2 {
   background-size: cover;
   padding: 40px 0;
 }
+
 
 .main-content p {
   font-size: 20px;
