@@ -252,7 +252,7 @@ h2 {
 
 svg > g > g:last-child { pointer-events: none }
 
-.next-previous-page {
+/* .next-previous-page {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -275,10 +275,13 @@ svg > g > g:last-child { pointer-events: none }
 
 .next-previous-page a {
     font-size: 1.3em;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (min-width: 1024px) {
     .next-previous-page {
         justify-content: space-around;
     }        
-}
+} */

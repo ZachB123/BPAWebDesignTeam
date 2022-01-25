@@ -428,7 +428,7 @@ footer h3 {
   justify-content: space-between;
 }
 
-.next-previous-page button {
+/* .next-previous-page button {
   padding: 0.6em 1.2em;
   background-color: var(--light-green);
   border: none;
@@ -441,10 +441,20 @@ footer h3 {
 
 .next-previous-page button:hover a{
   color: #fff;
-}
+} */
 
 .next-previous-page a {
   font-size: 1.3em;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 100vh;
+}
+
+.next-previous-page a:hover {
+  background-color: var(--dark-green);
+  color: #fff;
 }
 
 @media only screen and (min-width: 1024px) {
