@@ -13,6 +13,8 @@ header {
   position: fixed;
   background-image: url("../images/landscape-phone-compressed.png");
   background-size: cover;
+  background-position: center;
+  width: 100%;
   min-height: 100vh;
   box-shadow: 0 10px 14px rgb(34,34,34);
   background-attachment: fixed;
