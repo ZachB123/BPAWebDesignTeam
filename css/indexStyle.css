@@ -11,7 +11,7 @@
 
 header {
   position: fixed;
-  background-image: url("../images/landscape-phone-compressed.png");
+  background-image: url("../images/landscape-phone.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -129,14 +129,17 @@ h2 {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  header {
+    background-image: url("../images/landscape-tablet-compressed.png");
+  }
+}
+
 @media only screen and (min-width: 992px) {
   :root {
     --heading-font-size: 3.7em;
     --secondary-heading-font-size: 1.6em;
     --slogan-font-size: 1em;
-  }
-  header {
-    background-image: url("../images/landscape-tablet-compressed.png");
   }
   .spacer {
     height: 80px;
