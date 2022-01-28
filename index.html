@@ -335,7 +335,7 @@
                 </div>
                 <div class="right">
                     
-                        <a href="html/transportation.html">Next Page</a>
+                        <a href="html/transportation.html">Transportation →</a>
                     
                 </div>
             </section>
@@ -343,11 +343,13 @@
         <footer>
             <div class="email footer-item">
                 <div class="container">
-                    <h3>Contact Us</h3>
-                    <input id="name" type="text" placeholder="name">
-                    <input id="email" type="email" placeholder="email">
-                    <textarea placeholder="your message here"></textarea>
-                    <button>Send</button>
+                    <form id="contactUsForm" method="post" action="contactUs.php">
+                        <h3>Contact Us</h3>
+                        <input id="name" name="name" type="text" placeholder="name" required>
+                        <input id="email" name="email" type="email" placeholder="email" required>
+                        <textarea id="message" name="message" placeholder="your message here" required></textarea>
+                        <input type="submit" value="Send">
+                    </form>
                 </div>
             </div>
             <div class="links footer-item">

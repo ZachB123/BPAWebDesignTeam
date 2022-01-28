@@ -14,11 +14,11 @@ header {
   background-image: url("../images/landscape-phone.png");
   background-size: cover;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   box-shadow: 0 10px 14px rgb(34,34,34);
   background-attachment: fixed;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   perspective: 2px;
 }
 
