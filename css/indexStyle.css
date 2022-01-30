@@ -53,6 +53,7 @@ h2 {
   position: relative;
   top: 80px;
   text-align: center;
+  overflow: visible;
 }
 
 .spacer {
@@ -101,6 +102,9 @@ h2 {
       -ms-transform: skewX(-15deg);
           transform: skewX(-15deg);
   border: none;
+  overflow: visible;
+  position: relative;
+  bottom: 6px;
 }
 
 .cta:focus {
