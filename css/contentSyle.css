@@ -1,4 +1,3 @@
-
 :root {
     --hero-width: 90%;
 }
@@ -33,7 +32,8 @@ h1 {
 header img {
     width: calc(var(--hero-width));
     border-radius: 6px;
-    box-shadow: 10px 10px var(--medium-green);
+    -webkit-box-shadow: 10px 10px var(--medium-green);
+            box-shadow: 10px 10px var(--medium-green);
 }
 
 .description {
@@ -60,6 +60,8 @@ p, .list-item, .tips li {
 }
 
 .tips > ul {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto 0 6px;
 }

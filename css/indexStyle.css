@@ -15,11 +15,22 @@ header {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  box-shadow: 0 10px 14px rgb(34, 34, 34);
+  -webkit-box-shadow: 0 10px 14px rgb(34, 34, 34);
+          box-shadow: 0 10px 14px rgb(34, 34, 34);
   background-attachment: fixed;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  perspective: 2px;
+  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
+  -webkit-perspective: 2px;
+          perspective: 2px;
+  -ms-overflow-style: none;
+}
+
+header * {
+  overflow: hidden;
+}
+
+header::-webkit-scrollbar {
+  display: none;
 }
 
 .content-container {
@@ -64,13 +75,19 @@ h2 {
 }
 
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cta {
   margin-top: 40px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 10px 45px;
   text-decoration: none;
@@ -78,8 +95,11 @@ h2 {
   font-size: 40px;
   color: white;
   background-color: var(--medium-green);
-  box-shadow: 6px 6px 0 black;
-  transform: skewX(-15deg);
+  -webkit-box-shadow: 6px 6px 0 black;
+          box-shadow: 6px 6px 0 black;
+  -webkit-transform: skewX(-15deg);
+      -ms-transform: skewX(-15deg);
+          transform: skewX(-15deg);
   border: none;
 }
 
@@ -88,11 +108,18 @@ h2 {
 }
 
 .cta:hover {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  box-shadow: 10px 10px 0 #000;
+  -webkit-box-shadow: 10px 10px 0 #000;
+          box-shadow: 10px 10px 0 #000;
   background-color: var(--light-green);
   color: #000;
+  -webkit-transition: background-color 1s, color 1s, -webkit-box-shadow 0.5s;
+  transition: background-color 1s, color 1s, -webkit-box-shadow 0.5s;
+  -o-transition: background-color 1s, color 1s, box-shadow 0.5s;
   transition: background-color 1s, color 1s, box-shadow 0.5s;
+  transition: background-color 1s, color 1s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 .hero button.delete {
@@ -100,6 +127,7 @@ h2 {
   margin-top: 30px;
   font-size: 2em;
   padding: 0.5em 1em;
+  background-image: -o-linear-gradient(315deg, #4d774e, #164a41);
   background-image: linear-gradient(135deg, #4d774e, #164a41);
   color: #fff;
   cursor: pointer;
@@ -108,7 +136,8 @@ h2 {
 }
 
 .hero button.delete:hover {
-  box-shadow: 0 0 10px 3px #000;
+  -webkit-box-shadow: 0 0 10px 3px #000;
+          box-shadow: 0 0 10px 3px #000;
   background-image: none;
   background-color: rgb(231, 231, 231);
   color: black;
@@ -229,7 +258,8 @@ h2 {
 }
 
 .main-content img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 200px;
   height: 200px;
   border-radius: 100vh;
@@ -274,7 +304,8 @@ h2 {
     padding: 6px;
     margin: 50px auto;
     position: relative;
-    box-shadow: 50px -25px var(--medium-green), -50px 25px var(--dark-green);
+    -webkit-box-shadow: 50px -25px var(--medium-green), -50px 25px var(--dark-green);
+            box-shadow: 50px -25px var(--medium-green), -50px 25px var(--dark-green);
   }
   .content p {
     width: 90%;
@@ -323,9 +354,14 @@ h2 {
   }
   .content {
     width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .content2 {
     width: 60%;
@@ -334,6 +370,7 @@ h2 {
     display: block;
   }
   .main-content img:hover {
-    box-shadow: 0 0 10px #000;
+    -webkit-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
   }
 }
