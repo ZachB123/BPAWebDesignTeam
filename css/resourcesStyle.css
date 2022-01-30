@@ -16,9 +16,6 @@ main section {
     text-align: center;
     width: fit-content;
     margin: 0 auto;
-    background-color: var(--light-green);
-    box-shadow: 25px -13px var(--medium-green), -25px 13px var(--dark-green);
-    z-index: 1;
 }
 
 main p {
@@ -68,6 +65,11 @@ section a:hover {
     }
     main a {
         font-size: 30px;
+    }
+    .link-parent-container {
+        background-color: var(--light-green);
+        box-shadow: 25px -13px var(--medium-green), -25px 13px var(--dark-green);
+        z-index: 1;
     }
 }
 
