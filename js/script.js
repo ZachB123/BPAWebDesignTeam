@@ -22,7 +22,7 @@ function openMobileNav(event) {
 
 //closes mobile navigations screen
 function closeMobileNav(event) {
-    mobileNav.style.top = "-430px";
+    mobileNav.style.top = "-460px";
 }
 
 ////////////////////////////////////////
@@ -60,7 +60,7 @@ let nameInput = document.querySelector("#name");
 let emailInput = document.querySelector("#email");
 let messageArea = document.querySelector("footer textarea");
 
-sendButton.addEventListener("click", sendEmail);
+// sendButton.addEventListener("click", sendEmail);
 
 function sendEmail() {
     nameInput.value = "";

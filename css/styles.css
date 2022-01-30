@@ -261,8 +261,10 @@ nav #dropdown a:hover {
 
 footer {
   height: 600px;
-  background-color: rgb(44, 44, 44);
-  /* 44 */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2500' height='1800' preserveAspectRatio='none' viewBox='0 0 2500 1800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1165%26quot%3b)' fill='none'%3e%3crect width='2500' height='1800' x='0' y='0' fill='rgba(34%2c 34%2c 34%2c 1)'%3e%3c/rect%3e%3cpath d='M -189.8516830900346%2c1561 C -23.05%2c1311.2 310.55%2c350.8 644.1483169099654%2c312 C 977.75%2c273.2 1144.55%2c1398.8 1478.1483169099654%2c1367 C 1811.75%2c1335.2 1978.55%2c73.2 2312.1483169099656%2c153 C 2645.75%2c232.8 3108.58%2c1707.6 3146.1483169099656%2c1766 C 3183.72%2c1824.4 2629.23%2c709.2 2500%2c445' stroke='rgba(245%2c 245%2c 245%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -124.1915464709806%2c901 C 42.61%2c865.4 376.21%2c590.8 709.8084535290194%2c723 C 1043.41%2c855.2 1210.21%2c1591.6 1543.8084535290195%2c1562 C 1877.41%2c1532.4 2044.21%2c621.2 2377.8084535290195%2c575 C 2711.41%2c528.8 3187.37%2c1436.6 3211.8084535290195%2c1331 C 3236.25%2c1225.4 2642.36%2c303.8 2500%2c47' stroke='rgba(245%2c 245%2c 245%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -6.567324210572224%2c1239 C 160.23%2c1039.8 493.83%2c254.6 827.4326757894278%2c243 C 1161.03%2c231.4 1327.83%2c1088.8 1661.4326757894278%2c1181 C 1995.03%2c1273.2 2161.83%2c722.8 2495.432675789428%2c704 C 2829.03%2c685.2 3328.52%2c1226.4 3329.432675789428%2c1087 C 3330.35%2c947.6 2665.89%2c223 2500%2c7' stroke='rgba(245%2c 245%2c 245%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -722.3591446255048%2c726 C -555.56%2c817.4 -221.96%2c1253.2 111.64085537449522%2c1183 C 445.24%2c1112.8 612.04%2c402 945.6408553744952%2c375 C 1279.24%2c348 1446.04%2c1096.4 1779.6408553744952%2c1048 C 2113.24%2c999.6 2469.57%2c139.6 2613.640855374495%2c133 C 2757.71%2c126.4 2522.73%2c838.6 2500%2c1015' stroke='rgba(245%2c 245%2c 245%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1165'%3e%3crect width='2500' height='1800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  box-shadow: 0 -4px 14px rgb(34, 34, 34);
 }
 
 .email {
@@ -270,53 +272,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: lawngreen; */
+  text-align: center;
 }
 
 .email .container {
-  padding: 10px;
+  padding-top: 10px;
   margin: 0 auto;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.email .container>div {
+  width: 80%;
+  height: 100%;
+}
+
+.email iframe {
+  width: 100%;
+  height: 80%;
 }
 
 footer h3 {
   font-size: 30px;
   color: #fff;
-}
-
-.email input {
-  display: block;
-  width: 60%;
-  margin: 4px 0;
-  height: 26px;
-}
-
-.email textarea {
-  width: 100%;
-  height: 100px;
-}
-
-.email textarea, .email input {
-  border-radius: 8px;
-}
-
-.email input[type="submit"] {
-  display: inline-block;
-  width: 25%;
-  margin-top: 6px;
-  background-image: linear-gradient(135deg, #4d774e, #164a41);
-  color: #fff;
-  cursor: pointer;
-  border-radius: 2px;
-  border: 2px solid #000;
-  border-radius: 6px;
-}
-
-.email input[type="submit"]:hover {
-  box-shadow: 0 0 10px 3px #000;
-  background-image: none;
-  background-color: rgb(231, 231, 231);
-  color: black;
 }
 
 .links {
@@ -372,7 +352,7 @@ footer h3 {
 
 @media only screen and (min-width: 768px) {
   .email .container {
-    padding: 40px;
+    padding-top: 40px;
     width: 70%;
   }
   .email textarea {
@@ -384,15 +364,15 @@ footer h3 {
   footer {
     height: 500px;
     position: relative;
+    background-size: 100% 500px;
   }
   .email {
     height: 400px;
     width: 50%;
     float: left;
   }
-  .email textarea {
-    width: 100%;
-    height: 120px;
+  .email iframe {
+    height: 80%;
   }
   .links {
     height: 400px;

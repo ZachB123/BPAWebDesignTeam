@@ -15,7 +15,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  box-shadow: 0 10px 14px rgb(34,34,34);
+  box-shadow: 0 10px 14px rgb(34, 34, 34);
   background-attachment: fixed;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -69,49 +69,49 @@ h2 {
 }
 
 .cta {
-    margin-top: 40px;
-    cursor: pointer;
-    display: flex;
-    padding: 10px 45px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    color: white;
-    background-color: var(--medium-green);
-    box-shadow: 6px 6px 0 black;
-    transform: skewX(-15deg);
-    border: none;
+  margin-top: 40px;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 45px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: var(--medium-green);
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
 }
 
 .cta:focus {
-   outline: none; 
+  outline: none;
 }
 
 .cta:hover {
-    transition: 0.5s;
-    box-shadow: 10px 10px 0 #000;
-    background-color: var(--light-green);
-    color: #000;
-    transition: background-color 1s, color 1s, box-shadow 0.5s;
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #000;
+  background-color: var(--light-green);
+  color: #000;
+  transition: background-color 1s, color 1s, box-shadow 0.5s;
 }
 
 .hero button.delete {
-    display: none;
-    margin-top: 30px;
-    font-size: 2em;
-    padding: 0.5em 1em;
-    background-image: linear-gradient(135deg, #4d774e, #164a41);
-    color: #fff;
-    cursor: pointer;
-    border-radius: 6px;
-    border: 2px solid #000;
+  display: none;
+  margin-top: 30px;
+  font-size: 2em;
+  padding: 0.5em 1em;
+  background-image: linear-gradient(135deg, #4d774e, #164a41);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #000;
 }
 
 .hero button.delete:hover {
-    box-shadow: 0 0 10px 3px #000;
-    background-image: none;
-    background-color: rgb(231, 231, 231);
-    color: black;
+  box-shadow: 0 0 10px 3px #000;
+  background-image: none;
+  background-color: rgb(231, 231, 231);
+  color: black;
 }
 
 @media only screen and (max-width: 375px) {
@@ -175,7 +175,6 @@ h2 {
   padding: 40px 0;
 }
 
-
 .main-content p {
   font-size: 20px;
   color: rgb(32, 32, 32);
@@ -203,19 +202,20 @@ h2 {
   margin: 16px 0;
 }
 
-.learn-more-cta button {
+.learn-more-cta a {
   font-size: 22px;
   background-color: var(--background-color);
   padding: 0.25em 0.65em;
   border: 2.5px solid rgb(172, 172, 172);
-  border-radius: 999px;
+  color: #000;
+  border-radius: 100vh;
 }
 
 .learn-more-cta a {
   color: #000;
 }
 
-.learn-more-cta button:hover a{
+.learn-more-cta a:hover {
   color: rgb(95, 95, 95);
 }
 
@@ -284,17 +284,15 @@ h2 {
   .pages {
     width: 100%;
   }
-  .learn-more-cta button {
-    background-color: #34a853;
-  }
   .learn-more-cta a {
+    background-color: #34a853;
     color: #fff;
+    padding: 0.16em 1.6em;
   }
-  .learn-more-cta button:hover {
-    background-color: #fff;
-  }
+
   .learn-more-cta a:hover {
     color: #000;
+    background-color: #fff;
   }
   .welcome-big .content {
     padding-bottom: 40px;
@@ -309,7 +307,7 @@ h2 {
     font-size: 24px;
     line-height: 36px;
   }
-  
+
   .main-content h3 {
     font-size: 32px;
   }
@@ -334,7 +332,7 @@ h2 {
   }
   .image {
     display: block;
-  } 
+  }
   .main-content img:hover {
     box-shadow: 0 0 10px #000;
   }

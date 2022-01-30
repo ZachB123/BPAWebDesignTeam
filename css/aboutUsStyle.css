@@ -14,14 +14,21 @@ header {
 
 .image-wrapper {
     width: var(--image-width);
-    height: 300px;
-    background-color: green;
     margin: 12px auto;
+}
+
+section img {
+    width: var(--image-width);
+}
+
+header img {
+    width: 90%;
 }
 
 header p {
     margin-bottom: 12px;
 }
+
 
 h3 {
     font-size: 1.7em;
@@ -32,6 +39,10 @@ h3 {
 .member {
     text-align: center;
     margin: 50px auto;
+}
+
+.member p {
+    text-align: left;
 }
 
 @media only screen and (min-width: 512px) {

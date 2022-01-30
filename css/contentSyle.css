@@ -82,7 +82,7 @@ header hr {
 
 @media only screen and (min-width: 512px) {
     :root {
-        --hero-width: 75%;
+        --hero-width: 80%;
     }
     h1 {
         font-size: 2.7em;
@@ -95,7 +95,7 @@ header hr {
 
 @media only screen and (min-width: 768px) {
     :root {
-        --hero-width: 70%;
+        --hero-width: 75%;
     }
     h1 {
         font-size: 3em;
@@ -111,7 +111,7 @@ header hr {
 
 @media only screen and (min-width: 992px) {
     :root {
-        --hero-width: 60%;
+        --hero-width: 65%;
     }
     h1 {
         font-size: 3.2em;
@@ -119,12 +119,12 @@ header hr {
     p, .list-item, .tips li {
         font-size: 26px;
         line-height: 34px;
-    }   
+    } 
 }
 
 @media only screen and (min-width: 1200px) {
     :root {
-        --hero-width: 50%;
+        --hero-width: 58%;
     }
     h1 {
         font-size: 3.5em;

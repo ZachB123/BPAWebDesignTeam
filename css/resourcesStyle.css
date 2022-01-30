@@ -8,32 +8,38 @@ main h1 {
 }
 
 main section {
-    padding: 20px 0;
+    padding: 40px 0;
 }
-
-/* main ul {
-    margin: 0 auto;
-    width: fit-content;
-}
-
-main li {
-    padding: 10px 0;
-    font-size: 22px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    width: fit-content;
-} */
 
 .link-parent-container {
+    padding: 10px;
     text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--light-green);
+    box-shadow: 25px -13px var(--medium-green), -25px 13px var(--dark-green);
+    z-index: 1;
 }
 
-main a {
+main p {
+    width: var(--hero-width);
+    text-align: left;
+    margin: 8px auto;
+}
+
+section a {
     all: revert;
+    color: rgb(46, 46, 46);
     text-decoration: none;
     display: inline-block;
-    padding: 8px 0;
+    padding: 8px 4px;
     font-size: 22px;
+}
+
+section a:hover {
+    border: 1px solid #000;
+    border-radius: 100vh;
+    color: rgb(85, 85, 85);
 }
 
 .works-cited {
@@ -48,6 +54,11 @@ main a {
     padding: 0.3em 1em;
     border-radius: 100vh;
     margin: 20px 0;
+}
+
+.works-cited a:hover {
+    background-color: var(--light-green);
+    color: #000;
 }
 
 @media only screen and (min-width: 512px) {
