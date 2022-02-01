@@ -17,7 +17,7 @@
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -25,7 +25,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
 }
@@ -73,14 +74,14 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: var(--off-blackh);
   -webkit-box-shadow: 0px 4px 6px var(--off-blackh);
-          box-shadow: 0px 4px 6px var(--off-blackh);
+  box-shadow: 0px 4px 6px var(--off-blackh);
   opacity: 1;
 }
 
@@ -91,8 +92,8 @@ nav > div {
 .nav-left {
   margin: 0;
   -webkit-transform: translate(4px, 4px);
-      -ms-transform: translate(4px, 4px);
-          transform: translate(4px, 4px);
+  -ms-transform: translate(4px, 4px);
+  transform: translate(4px, 4px);
 }
 
 .nav-left h2 {
@@ -115,7 +116,7 @@ ul {
   padding: 0;
   margin: 0;
   -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 
 .nav-item {
@@ -134,13 +135,13 @@ ul {
 .nav-item:hover {
   background-color: var(--hover-white);
   -webkit-box-shadow: 6px 6px var(--off-black);
-          box-shadow: 6px 6px var(--off-black);
+  box-shadow: 6px 6px var(--off-black);
 }
 
 .nav-item-hover {
   background-color: var(--hover-white);
   -webkit-box-shadow: 6px 6px var(--off-black);
-          box-shadow: 6px 6px var(--off-black);
+  box-shadow: 6px 6px var(--off-black);
 }
 
 .nav-item:hover > a {
@@ -149,8 +150,8 @@ ul {
 
 .nav-item i {
   -webkit-transform: translateY(6px);
-      -ms-transform: translateY(6px);
-          transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  transform: translateY(6px);
 }
 
 nav ul li:first-child > a {
@@ -164,7 +165,7 @@ nav #dropdown {
   top: 80px;
   text-align: center;
   -webkit-box-shadow: 6px 6px var(--off-black);
-          box-shadow: 6px 6px var(--off-black);
+  box-shadow: 6px 6px var(--off-black);
   line-height: 50px;
   height: auto;
   cursor: pointer;
@@ -226,8 +227,8 @@ nav #dropdown a:hover {
   transition: transform 0.25s linear 0s;
   transition: transform 0.25s linear 0s, -webkit-transform 0.25s linear 0s;
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
   color: rgb(226, 226, 226);
 }
 
@@ -281,7 +282,7 @@ footer {
   background-repeat: no-repeat;
   background-size: 100% 600px;
   -webkit-box-shadow: 0 -4px 14px rgb(34, 34, 34);
-          box-shadow: 0 -4px 14px rgb(34, 34, 34);
+  box-shadow: 0 -4px 14px rgb(34, 34, 34);
 }
 
 .email {
@@ -290,11 +291,11 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -307,8 +308,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .email .container > div {
@@ -338,11 +339,11 @@ footer h3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .links-left,
@@ -374,10 +375,10 @@ footer h3 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .social-media img {
@@ -386,6 +387,25 @@ footer h3 {
 
 .social-media img:hover {
   height: 62.6px;
+}
+
+.gmail-container {
+  position: relative;
+}
+
+.social-media img:hover + .popup, .social-media .popup:hover {
+  display: block;
+}
+
+.popup {
+  display: none;
+  font-size: 18px;
+  width: fit-content;
+  position: absolute;
+  top: -28px;
+  background-color: rgb(34,34,34);
+  color: #fff;
+  padding: 0.4em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -427,8 +447,8 @@ footer h3 {
   }
   .social-media .container {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .social-media img {
     margin: 0 20px;
@@ -447,8 +467,8 @@ footer h3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .next-previous-page a {
@@ -468,7 +488,7 @@ footer h3 {
 @media only screen and (min-width: 1024px) {
   .next-previous-page {
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     font-size: 1.3em;
   }
 }

@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 ////////////////////////////////////////
 // Mobile Navigation
@@ -17,12 +17,12 @@ let navHeight = mobileNav.getBoundingClientRect().height;
 
 //opens the navigation screen on mobile when hamburger icon is clicked
 function openMobileNav(event) {
-    mobileNav.style.top = "0px";
+  mobileNav.style.top = "0px";
 }
 
 //closes mobile navigations screen
 function closeMobileNav(event) {
-    mobileNav.style.top = "-460px";
+  mobileNav.style.top = "-460px";
 }
 
 ////////////////////////////////////////
@@ -39,16 +39,16 @@ carbonSources.addEventListener("pointerout", hideDropdown);
 
 //makes the dropdown with three links visible
 function showDropdown(event) {
-    let carbonSourcesRectangle = carbonSources.getBoundingClientRect();
-    console.dir(carbonSourcesRectangle);
+  let carbonSourcesRectangle = carbonSources.getBoundingClientRect();
+  console.dir(carbonSourcesRectangle);
 
-    carbonSourcesDropdown.style.width = carbonSourcesRectangle.width + "px";
-    carbonSourcesDropdown.style.left = carbonSourcesRectangle.left + "px";
-    carbonSourcesDropdown.style.display = "block";
+  carbonSourcesDropdown.style.width = carbonSourcesRectangle.width + "px";
+  carbonSourcesDropdown.style.left = carbonSourcesRectangle.left + "px";
+  carbonSourcesDropdown.style.display = "block";
 }
 
 function hideDropdown(event) {
-    carbonSourcesDropdown.style.display = "none";
+  carbonSourcesDropdown.style.display = "none";
 }
 
 ////////////////////////////////////////
@@ -63,19 +63,13 @@ let messageArea = document.querySelector("footer textarea");
 // sendButton.addEventListener("click", sendEmail);
 
 function sendEmail() {
-    nameInput.value = "";
-    emailInput.value = "";
-    messageArea.value = "";
+  nameInput.value = "";
+  emailInput.value = "";
+  messageArea.value = "";
 }
 
-
-
 function autoScrolling() {
-    window.scrollTo(0,document.body.scrollHeight);
- }
- 
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
 //  setInterval(autoScrolling, 500);
-
-
-
-

@@ -1,106 +1,107 @@
 main header {
-    text-align: center;
+  text-align: center;
 }
 
 main h1 {
-    padding: 12px 0;
+  padding: 12px 0;
 }
 
 main section {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 .link-parent-container {
-    padding: 10px;
-    text-align: center;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 main p {
-    width: var(--hero-width);
-    text-align: left;
-    margin: 8px auto;
+  width: var(--hero-width);
+  text-align: left;
+  margin: 8px auto;
 }
 
 section a {
-    all: revert;
-    color: rgb(46, 46, 46);
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 4px;
-    font-size: 22px;
+  all: revert;
+  color: rgb(46, 46, 46);
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 4px;
+  font-size: 22px;
 }
 
 section a:hover {
-    border: 1px solid #000;
-    border-radius: 100vh;
-    color: rgb(85, 85, 85);
+  border: 1px solid #000;
+  border-radius: 100vh;
+  color: rgb(85, 85, 85);
 }
 
 .works-cited {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .works-cited a {
-    background-color: var(--medium-green);
-    color: #fff;
-    padding: 0.3em 1em;
-    border-radius: 100vh;
-    margin: 20px 0;
+  background-color: var(--medium-green);
+  color: #fff;
+  padding: 0.3em 1em;
+  border-radius: 100vh;
+  margin: 20px 0;
 }
 
 .works-cited a:hover {
-    background-color: var(--light-green);
-    color: #000;
+  background-color: var(--light-green);
+  color: #000;
 }
 
 @media only screen and (min-width: 512px) {
-    main {
-        width: 80%;
-        margin: 0 auto;
-    }
-    main a {
-        font-size: 30px;
-    }
-    .link-parent-container {
-        background-color: var(--light-green);
-        -webkit-box-shadow: 25px -13px var(--medium-green), -25px 13px var(--dark-green);
-                box-shadow: 25px -13px var(--medium-green), -25px 13px var(--dark-green);
-        z-index: 1;
-    }
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main a {
+    font-size: 30px;
+  }
+  .link-parent-container {
+    background-color: var(--light-green);
+    -webkit-box-shadow: 25px -13px var(--medium-green),
+      -25px 13px var(--dark-green);
+    box-shadow: 25px -13px var(--medium-green), -25px 13px var(--dark-green);
+    z-index: 1;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    main {
-        width: 60%;
-        margin: 0 auto;
-    }
-    main a {
-        font-size: 36px;
-    }
+  main {
+    width: 60%;
+    margin: 0 auto;
+  }
+  main a {
+    font-size: 36px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    main {
-        width: 100%;
-        margin: 0 auto;
-    }
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-    main a {
-        font-size: 38px;
-    }
+  main a {
+    font-size: 38px;
+  }
 }
