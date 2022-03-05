@@ -16,13 +16,13 @@ let mobileNav = document.querySelector("nav .mobile-nav");
 let navHeight = mobileNav.getBoundingClientRect().height;
 
 //opens the navigation screen on mobile when hamburger icon is clicked
-function openMobileNav(event) {
+function openMobileNav() {
   mobileNav.style.top = "0px";
 }
 
 //closes mobile navigations screen
-function closeMobileNav(event) {
-  mobileNav.style.top = "-460px";
+function closeMobileNav() {
+  mobileNav.style.top = "-480px";
 }
 
 ////////////////////////////////////////
@@ -73,3 +73,8 @@ function autoScrolling() {
 }
 
 //  setInterval(autoScrolling, 500);
+
+function switchPage(event, current, newPage) {
+  // window.location.href = window.location.href.replace(current, newPage);
+  // event.preventDefault();
+}

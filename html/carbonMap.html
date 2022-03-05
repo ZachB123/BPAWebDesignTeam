@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/contentStyle.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contentStyle.css">
     <script src="../js/script.js" defer></script>
-    <title>Transportation</title>
+    <title>Energy</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
-<body oncontextmenu="switchPage(event,'transportation','food')">
+<body oncontextmenu="switchPage(event,'energy','whyCare')">
     <nav>
         <div class="nav-left">
             <a href="../index.html">
@@ -77,92 +77,26 @@
     <header>
         <div class="hero">
             <div class="title">
-                <h1>Transportation</h1>
-            </div>
-            <div class="main-image">
-                <img src="../images/transportation-hero.jpeg" alt="Transportation">
+                <h1>Carbon Map</h1>
             </div>
             <div class="description">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;Transportation is a key factor in rising carbon emissions and climate change.
-                    In fact,
-                    29% of total US greenhouse gas emissions come from transportation, and is the largest contributor
-                    of total emissions. Why? For most transportation modes such as cars, trucks and planes to operate, they
-                    burn large amounts of fossil fuels like gasoline and diesel which releases carbon dioxide into the
-                    atmosphere. Growing levels of carbon dioxide have created a greenhouse effect that
-                    warms the planet at a rapid rate.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
             </div>
             <hr>
         </div>
     </header>
     <section class="main-content">
-        <div class="chart">
-            <h2>Total U.S Carbon Footprint Broken Down</h2>
-            <div class="google-chart" id="transportationPie"></div>
-            <p>&nbsp;&nbsp;The chart above showcases how varying sources produce different amounts of carbon.</p>
-        </div>
-        <div class="chart">
-            <h2>Carbon Footprint of Different Modes of Transportation</h2>
-            <div class="content-wrapper">
-                <div class="google-chart" id="transportationModes"></div>
-                <p>&nbsp;&nbsp;The chart above shows how different modes of transportation contribute differently to the
-                    carbon footprint. Cars and trucks, being the most universal mode of transportation, contribute the
-                    most
-                    to the United States carbon footprint. Vehicle emissions have been increasing every year and this
-                    trend
-                    is unlikely to change. However, as electric vehicles and renewable energy are becoming more common,
-                    there is hope for a cleaner future.</p>
-            </div>
-        </div>
-        <div class="tips">
-            <div class="h2-wrapper">
-                <h2>Tips/Tricks</h2>
-            </div>
-            <ul>
-                <li>
-                    Traveling Short Distances
-                    <ul>
-                        <li>Walk or ride a bike</li>
-                        <li>Utilize public transportation, like buses and subways; the more people traveling in a singular
-                            vehicle together, the smaller the carbon footprint</li>
-                        <li>Combine trips and run multiple errands at once or finish multiple events you have to do in one
-                            trip</li>
-                        <li>Invite your friends and family to carpool</li>
-                    </ul>
-                </li>
-                <li>
-                    Traveling Longer Distances
-                    <ul>
-                        <li>Trains</li>
-                        <li>Hop on a train or a long-distance bus</li>
-                        <li>Replace short-flights with a car or carpool</li>
-                    </ul>
-                </li>
-                <li>
-                    If You Have to Fly
-                    <ul>
-                        <li>Take large commercial airliners with more people</li>
-                    </ul>
-                </li>
-                <li>
-                    Vehicle Alternatives
-                    <ul>
-                        <li>Drive an electric vehicle - they are a cleaner and greener option than gasoline as they
-                            prevent air pollution and cut fossil fuel use</li>
-                        <li>Use fuel-efficient vehicles</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        
     </section>
     <section class="next-previous-page">
         <div class="left">
 
-            <a href="../index.html">← Home</a>
+            <a href="energy.html">← Energy</a>
 
         </div>
         <div class="right">
 
-            <a href="food.html">Food →</a>
+            <a href="carbonCalculator.html">Carbon Calculator →</a>
 
         </div>
     </section>
@@ -209,52 +143,6 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" defer>
-        window.addEventListener("resize", drawChart);
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            {
-                let options = {
-                    height: 400,
-                    backgroundColor: 'transparent',
-                    is3D: true,
-                    // colors: [],
-                };
-                let data = new google.visualization.DataTable();
-                data.addColumn("string", "Carbon Source");
-                data.addColumn("number", "Percentage");
-                data.addRows([
-                    ["Transportation", 0.29],
-                    ["Energy", 0.26],
-                    ["Goods", 0.30],
-                    ["Food", 0.15],
-                ]);
-                let chart = new google.visualization.PieChart(document.querySelector("#transportationPie"));
-                chart.draw(data, options);
-            }
-            {
-                let options = {
-                    height: 400,
-                    backgroundColor: 'transparent',
-                    is3D: true,
-                    // colors: [],
-                };
-                let data = new google.visualization.DataTable();
-                data.addColumn("string", "Transportation Mode");
-                data.addColumn("number", "Percentage");
-                data.addRows([
-                    ["Trucks", 0.34],
-                    ["Cars", 0.4],
-                    ["Planes", 0.11],
-                    ["Boats", 0.11],
-                    ["Other", 0.04]
-                ]);
-                let chart = new google.visualization.BarChart(document.querySelector("#transportationModes"));
-                chart.draw(data, options);
-            }
-        }
-    </script>
 </body>
 
 </html>
