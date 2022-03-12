@@ -78,3 +78,25 @@ function switchPage(event, current, newPage) {
   // window.location.href = window.location.href.replace(current, newPage);
   // event.preventDefault();
 }
+
+function linear(x) {
+  return 3*x;
+}
+
+function r(x) {
+let value = (-443/5000)*(x**2) + (33/4)*x + 61;
+if(value < 0) {return 0;}
+return value;
+}
+
+function g(x) {
+let value = (123/2500)*(x**2) + (-186/25)*x + 252;
+if(value < 0) {return 0;}
+return value;
+}
+
+function b(x) {
+let value = (-3/5000)*(x**2) + (3/100)*x + 3;
+if(value < 0) {return 0;}
+return value;
+}
