@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/contentStyle.css">
+    <link rel="stylesheet" href="../css/carbonCalculatorStyle.css">
     <script src="../js/script.js" defer></script>
-    <title>Energy</title>
+    <script src="../js/calculatorScript.js" defer></script>
+    <title>Carbon Calculator</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -79,14 +81,272 @@
             <div class="title">
                 <h1>Carbon Calculator</h1>
             </div>
-            <div class="description">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            </div>
             <hr>
         </div>
     </header>
     <section class="main-content">
+        <div class="quiz-content q0">
+            <div class="question-title"><h3>Welcome to the carbon calculator! By completing a series of questions, you will get an estimate of how many tons of Co2 you emit annually.</h3></div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q1">
+            <div class="question-title"><h3>What mode of transportation do you use most often?</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="radio" name="transportationMode" id="gasCar" value="gasCar" checked="checked">
+                    <label for="gasCar">Gas Car</label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="transportationMode" id="electricCar" value="electricCar">   
+                    <label for="electricCar">Electric Car</label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="transportationMode" id="bus" value="bus">  
+                    <label for="bus">Bus/Public Transportation</label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="transportationMode" id="bike" value="bike">   
+                    <label for="bike">Bike</label>
+                </div> 
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q2">
+            <div class="question-title"><h3>Driving Information</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="number" name="gasTimeDriven" id="gasTimeDriven" value="2">
+                    <label for="gasTimeDriven">Average time driving per day in hours</label>
+                </div>
+                <div class="answer-option">
+                    <select name="fuel" id="fuel">
+                      <option value="gas">Gas</option>
+                      <option value="diesel">Diesel</option>
+                    </select>   
+                    <label for="fuel">Gas or Diesel?</label>
+                </div>
+                <div class="answer-option">
+                    <select name="gasDriveLocation" id="gasDriveLocation">
+                        <option value="city">City</option>
+                        <option value="highway">Highway</option>
+                    </select>
+                    <label for="gasDriveLocation">Where do you normally drive?</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q3">
+            <div class="question-title"><h3>Driving Information</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="number" name="electricTimeDriven" id="electricTimeDriven" value="2">
+                    <label for="electricTimeDriven">Average time driving per day in hours</label>
+                </div>
+                <div class="answer-option">
+                    <select name="electricDriveLocation" id="electricDriveLocation">
+                        <option value="city">City</option>
+                        <option value="highway">Highway</option>
+                    </select>
+                    <label for="electricDriveLocation">Where do you normally drive?</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q4">
+            <div class="question-title"><h3>Bus Information</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="number" name="timeOnBus" id="timeOnBus" value="20">
+                    <label for="timeOnBus">Average time on the bus per day in minutes</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q5">
+            <div class="question-title"><h3>Plane Information</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="number" name="timeOnPlane" id="timeOnPlane" value="10">
+                    <label for="timeOnPlane">Hours spent on a plane in the last year</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q6">
+            <div class="question-title"><h3>Food</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <div class="slider-container" style="display: inline">
+                        <span>$0</span>
+                        <input type="range" min="0" max="1000" value="250" name="weeklyFood" id="weeklyFood">
+                        <span>$1000</span>
+                    </div>
+                    <label for="weeklyFood">Dollars spent on food per week</label>
+                </div>
+                <div class="answer-option">
+                    <div class="slider-container" style="display: inline">
+                        <span>0</span>
+                        <input type="range" min="0" max="100" value="50" name="packagedFood" id="packagedFood">
+                        <span>100</span>
+                    </div>
+                    <label for="packagedFood">Estimate of packaged items bought per week</label>
+                </div>
+                <div class="answer-option">
+                    <div class="slider-container" style="display: inline">
+                        <span>0</span>
+                        <input type="range" min="0" max="100" value="50" name="meatOunces" id="meatOunces">
+                        <span>100</span>
+                    </div>
+                    <label for="meatOunces">Average ounces of meat bought per week</label>
+                </div>
+                <div class="answer-option">
+                    <input type="checkbox" name="localProduce" id="localProduce">
+                    <label for="localProduce">Do you buy local produce often?</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q7">
+            <div class="question-title"><h3>Goods</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="checkbox" name="localGoods" id="localGoods">
+                    <label for="localGoods">Do you buy local goods?</label>
+                </div>
+                <!-- <div class="answer-option">
+                    <div class="slider-container" style="display: inline">
+                        <span>0%</span>
+                        <input type="range" min="0" max="100" value="50" name="onlineItems" id="onlineItems">
+                        <span>100%</span>
+                    </div>
+                    <label for="onlineItems">What percentage of your shopping is online?</label>    
+                </div> -->
+                <div class="answer-option">
+                    <input type="number" name="storeItemsBought" id="storeItemsBought" value="10">
+                    <label for="storeItemsBought">How many items per week do you buy in store? (not food)</label>
+                </div>
+                <div class="answer-option">
+                    <input type="number" name="onlineItemsBought" id="onlineItemsBought" value="20">
+                    <label for="onlineItemsBought">How many items per week do you buy online? (not food)</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q8">
+            <div class="question-title"><h3>How much energy do you use to power your house?</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <div class="slider-container" style="display: inline">
+                        <span>A little</span>
+                        <input type="range" min="20" max="100" value="50" name="energyUse" id="energyUse">
+                        <span>A lot</span>
+                    </div>    
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q9">
+            <div class="question-title"><h3>How do you power your house?</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <select name="housePowerSource" id="housePowerSource">
+                        <option value="Coal/Oil">Coal/Oil</option>
+                        <option value="Natural-Gas">Natural Gas</option>
+                        <option value="Solar">Solar Panels</option>
+                        <option value="otherRenewable">Other Renewable Source</option>
+                    </select>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q10">
+            <div class="question-title"><h3>What percent of your house is powered by solar panels?</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <div class="slider-container" style="display: inline">
+                        <span>0%</span>
+                        <input type="range" min="0" max="100" value="50" name="solarUse" id="solarUse">
+                        <span>100%</span>
+                    </div>    
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
         
+        <div class="quiz-content q11">
+            <div class="question-title"><h3>Do you live in a warm or cold area?</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="radio" name="location" id="warm" checked="checked">
+                    <label for="warm">Warm</label>
+                </div>
+                <div class="answer-option">
+                    <input type="radio" name="location" id="cold">
+                    <label for="cold">Cold</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Next Question</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q12">
+            <div class="question-title"><h3>Energy efficient items</h3></div>
+            <div class="question-box">
+                <div class="answer-option">
+                    <input type="checkbox" name="efficientLightbulbs" id="efficientLightbulbs">
+                    <label for="efficientLightbulbs">Do you have energy efficient lightbulbs?</label>
+                </div>
+                <div class="answer-option">
+                    <input type="checkbox" name="efficientAppliances" id="efficientAppliances">
+                    <label for="efficientAppliances">Do you have energy efficient appliances?</label>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="right">Finish</button>
+            </div>
+        </div>
+
+        <div class="quiz-content q13">
+            <div class="question-title" id="answerBox"></div>
+            <p>The average American releases 20 tons of Co2 per year.</p>
+            <div class="navigation">
+                <button class="right">Take Again</button>
+            </div>
+        </div>
+    
     </section>
     <section class="next-previous-page">
         <div class="left">

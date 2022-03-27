@@ -1,0 +1,29 @@
+
+
+.map-key {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.gradient-container {
+    display: flex;
+    justify-content: center;
+}
+
+.gradient-container p {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+.gradient {
+    display: inline-block;
+    margin: none;
+    height: 24px;
+    width: 50%;
+    background: linear-gradient(90deg, #3FF903, #FC0F03);
+}
+
+.units {
+    font-size: 14px;
+}
