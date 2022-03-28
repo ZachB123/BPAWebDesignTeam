@@ -52,3 +52,15 @@ function setOpacityNav(opacity) {
 }
 
 adjustNavbar();
+
+let hero = document.querySelector(".hero");
+
+function setOpacityHero(opacity) {
+  hero.style.opacity = opacity;
+}
+
+document.addEventListener("scroll", adjustHero);
+
+function adjustHero() {
+  let headerBox = header.getBoundingClientRect();
+}

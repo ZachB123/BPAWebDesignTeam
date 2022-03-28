@@ -35,9 +35,9 @@ section a {
 }
 
 section a:hover {
-  border: 1px solid #000;
-  border-radius: 100vh;
-  color: rgb(85, 85, 85);
+  /* border: 1px solid #000; */
+  /* border-radius: 100vh; */
+  color: rgb(107, 107, 107);
 }
 
 .works-cited {

@@ -56,7 +56,7 @@ dq(".q2 button").addEventListener("click", () => {
         carbon += time * 365 * 0.024;
     }
     else {
-        carbon += time * 365 * 0.012;
+        carbon += time * 365 * 0.012 * 1.3;
     }
     hide(questions[2]);
     vis(questions[5]);
