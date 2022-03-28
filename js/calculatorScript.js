@@ -116,7 +116,7 @@ let energy;
 let source;
 
 dq(".q8 button").addEventListener("click", () => {
-    energy = dq("#energyUse").value;
+    energy = dq("#peopleInHome").value * 12.5;
     hide(questions[8]);
     vis(questions[9]);
 });
@@ -161,8 +161,8 @@ dq(".q12 button").addEventListener("click", () => {
     let appliances = dq("#efficientAppliances").checked;
     if(lightBulbs) {carbon *= 0.98;}
     if(appliances) {carbon *= 0.965;}
-    console.log(carbon);
     hide(questions[12]);
+    carbon * 0.9;
     dq("#answerBox").innerHTML = `<h3>You release ${parseInt(carbon)} tons of Co2 per year</h3>`;
     vis(questions[13]);
 });

@@ -196,7 +196,10 @@
                 <div class="answer-option">
                     <div class="slider-container" style="display: inline">
                         <span>$0</span>
-                        <input type="range" min="0" max="1000" value="250" name="weeklyFood" id="weeklyFood">
+                        <span class="slider-concise-container">
+                            <output>250</output>
+                            <input type="range" min="0" max="1000" value="250" name="weeklyFood" id="weeklyFood" oninput="this.previousElementSibling.value = this.value">
+                        </span>
                         <span>$1000</span>
                     </div>
                     <label for="weeklyFood">Dollars spent on food per week</label>
@@ -204,7 +207,10 @@
                 <div class="answer-option">
                     <div class="slider-container" style="display: inline">
                         <span>0</span>
-                        <input type="range" min="0" max="100" value="50" name="packagedFood" id="packagedFood">
+                        <span class="slider-concise-container">
+                            <output>50</output>
+                            <input type="range" min="0" max="100" value="50" name="packagedFood" id="packagedFood" oninput="this.previousElementSibling.value = this.value">
+                        </span>
                         <span>100</span>
                     </div>
                     <label for="packagedFood">Estimate of packaged items bought per week</label>
@@ -212,7 +218,10 @@
                 <div class="answer-option">
                     <div class="slider-container" style="display: inline">
                         <span>0</span>
-                        <input type="range" min="0" max="100" value="50" name="meatOunces" id="meatOunces">
+                        <span class="slider-concise-container">
+                            <output>50</output>
+                            <input type="range" min="0" max="100" value="50" name="meatOunces" id="meatOunces" oninput="this.previousElementSibling.value = this.value">
+                        </span>
                         <span>100</span>
                     </div>
                     <label for="meatOunces">Average ounces of meat bought per week</label>
@@ -257,14 +266,15 @@
         </div>
 
         <div class="quiz-content q8">
-            <div class="question-title"><h3>How much energy do you use to power your house?</h3></div>
+            <div class="question-title"><h3>How many people live in your home?</h3></div>
             <div class="question-box">
                 <div class="answer-option">
-                    <div class="slider-container" style="display: inline">
+                    <!-- <div class="slider-container" style="display: inline">
                         <span>A little</span>
                         <input type="range" min="20" max="100" value="50" name="energyUse" id="energyUse">
                         <span>A lot</span>
-                    </div>    
+                    </div>     -->
+                    <input type="number" value="4" name="peopleInHome" id="peopleInHome">
                 </div>
             </div>
             <div class="navigation">
@@ -295,7 +305,10 @@
                 <div class="answer-option">
                     <div class="slider-container" style="display: inline">
                         <span>0%</span>
-                        <input type="range" min="0" max="100" value="50" name="solarUse" id="solarUse">
+                        <span class="slider-concise-container">
+                            <output>50</output>
+                            <input type="range" min="0" max="100" value="50" name="solarUse" id="solarUse" oninput="this.previousElementSibling.value = this.value">
+                        </span>
                         <span>100%</span>
                     </div>    
                 </div>

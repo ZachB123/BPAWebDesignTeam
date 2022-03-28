@@ -47,4 +47,24 @@ input[type="radio"] {
     -o-transform: scale(1.7);
 }
 
+.slider-concise-container {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 12px;
+}
 
+input, select {
+    font-size: 24px;
+    width: 120px;
+}
+
+#housePowerSource {
+    width: fit-content;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}

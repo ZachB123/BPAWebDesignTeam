@@ -63,4 +63,6 @@ document.addEventListener("scroll", adjustHero);
 
 function adjustHero() {
   let headerBox = header.getBoundingClientRect();
+  let scrollHeight = document.documentElement.scrollTop;
+  setOpacityHero(1/(1+Math.E**(0.02*(scrollHeight-headerBox.height+300))))
 }
