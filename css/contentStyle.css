@@ -178,7 +178,7 @@ h2 {
   margin: 60px 0;
 }
 
-.chart, .tips {
+.chart, .tips, .quiz-content {
   background-color: rgb(235, 235, 235);
   padding: 40px;
   border-radius: 30px;
