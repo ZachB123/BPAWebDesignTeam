@@ -103,6 +103,16 @@ h3 {
     font-size: 24px;
     line-height: 32px;
   }
+  .chart, .tips, .quiz-content {
+    background-color: rgb(235, 235, 235);
+    padding: 40px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 10px 10px rgb(196, 196, 196);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -176,17 +186,6 @@ h2 {
 .chart {
   text-align: left;
   margin: 60px 0;
-}
-
-.chart, .tips, .quiz-content {
-  background-color: rgb(235, 235, 235);
-  padding: 40px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  box-shadow: 10px 10px rgb(196, 196, 196);
 }
 
 .google-chart {

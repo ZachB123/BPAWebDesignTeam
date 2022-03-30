@@ -18,6 +18,7 @@ header {
 
 section img {
   width: var(--image-width);
+  height: 536px;
 }
 
 header img {
