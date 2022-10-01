@@ -75,8 +75,8 @@ function autoScrolling() {
 //  setInterval(autoScrolling, 500);
 
 function switchPage(event, current, newPage) {
-  // window.location.href = window.location.href.replace(current, newPage);
-  // event.preventDefault();
+  window.location.href = window.location.href.replace(current, newPage);
+  event.preventDefault();
 }
 
 function linear(x) {
